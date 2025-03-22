@@ -7,10 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
+    // Menü öffnen/schließen
     menuButton.addEventListener("click", function () {
         menu.classList.toggle("hidden");
     });
 
+    // Klick auf Menüpunkt -> Abschnitt anzeigen
     document.querySelectorAll("#menu a").forEach(link => {
         link.addEventListener("click", function (event) {
             event.preventDefault();
