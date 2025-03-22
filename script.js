@@ -8,24 +8,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     menuButton.addEventListener("click", function () {
-        if (menu.classList.contains("hidden")) {
-            menu.classList.remove("hidden");
-            menu.style.display = "block";
-        } else {
-            menu.classList.add("hidden");
-            menu.style.display = "none";
-        }
+        menu.classList.toggle("hidden");
     });
 
     document.querySelectorAll("#menu a").forEach(link => {
-        link.addEventListener("click", function () {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
             document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
             const target = document.querySelector(this.getAttribute("href"));
             if (target) {
                 target.classList.remove("hidden");
             }
-            menu.classList.add("hidden"); 
-            menu.style.display = "none"; 
+            menu.classList.add("hidden");
         });
     });
 });
