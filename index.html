@@ -1,109 +1,64 @@
-body {
-    background-color: #ccffcc; /* Hellgrün */
-    color: black;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart-Sportverein Spitzbuwe Weierbach</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dart-Sportverein Spitzbuwe Weierbach</h1>
+        <p>Gemeinsam treffen wir ins Schwarze!</p>
+    </header>
 
-header {
-    background-color: #99cc99;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-}
+    <nav>
+        <ul>
+            <li><a href="#galerie">Bildergalerie</a></li>
+            <li><a href="#turniere">Turniere</a></li>
+            <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    background: #77bb77;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
+    <section id="galerie">
+        <h2>Bildergalerie</h2>
+        <div class="gallery">
+            <img src="img/dart1.jpg" alt="Dart Bild 1" class="zoom">
+            <img src="img/dart2.jpg" alt="Dart Bild 2" class="zoom">
+        </div>
+    </section>
 
-nav ul li {
-    margin: 10px;
-}
+    <section id="turniere">
+        <h2>Nächste Turniere</h2>
+        <p>📅 15. April – Stadtmeisterschaft</p>
+        <p>📅 30. Mai – Vereinsmeisterschaft</p>
+    </section>
 
-nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background 0.3s ease;
-}
+    <section id="mitgliedschaft">
+        <h2>Mitglied werden</h2>
+        <p>Interessiert? Fülle das Formular aus und werde Teil unseres Teams!</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-nav a:hover {
-    background: #66aa66;
-    border-radius: 5px;
-}
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
 
-section {
-    margin: 30px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+            <button type="submit">Absenden</button>
+        </form>
+    </section>
 
-h2 {
-    color: #005500;
-}
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <p>Email: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
+        <p>Adresse: Bein</p>
+    </section>
 
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
+    <footer>
+        <p>© 2025 Dart-Sportverein Spitzbuwe Weierbach</p>
+    </footer>
 
-img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.1);
-}
-
-footer {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #99cc99;
-}
-
-// Bilder per Klick vergrößern
-document.querySelectorAll(".zoom").forEach(img => {
-    img.addEventListener("click", () => {
-        if (img.style.transform === "scale(2)") {
-            img.style.transform = "scale(1)";
-        } else {
-            img.style.transform = "scale(2)";
-        }
-    });
-});
-
-// Bilder per Klick vergrößern
-document.querySelectorAll(".zoom").forEach(img => {
-    img.addEventListener("click", () => {
-        if (img.style.transform === "scale(2)") {
-            img.style.transform = "scale(1)";
-        } else {
-            img.style.transform = "scale(2)";
-        }
-    });
-});
-
-// Sanfter Scroll-Effekt für die Navigation
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", function(event) {
-        event.preventDefault();
-        const targetId = this.getAttribute("href").substring(1);
-        const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({ behavior: "smooth" });
-    });
-});
+    <script src="script.js"></script>
+</body>
+</html>
