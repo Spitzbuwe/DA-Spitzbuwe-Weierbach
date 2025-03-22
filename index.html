@@ -8,100 +8,96 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+    <header>
+        <img src="images/wappen.png" alt="Vereinswappen" class="wappen">
+        <h1>Dart-Abteilung Spitzbuwe Weierbach</h1>
+    </header>
 
-<header>
-    <img src="images/wappen.png" alt="Vereinswappen" class="wappen">
-    <h1>Dart-Abteilung Spitzbuwe Weierbach</h1>
-</header>
+    <section id="bio">
+        <h2>Über uns</h2>
+        <p>Wir sind die Dart-Abteilung Spitzbuwe Weierbach! Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt.</p>
+        <h3>Hauptverein</h3>
+        <img src="images/hauptverein.png" alt="VfL Weierbach 1892 e.V.">
+        <p>VfL Weierbach 1892 e.V.</p>
+        <h3>Partnerverein</h3>
+        <img src="images/partnerverein.png" alt="Vfl Weierbach Damenmannschaft">
+        <p>Vfl Weierbach Damenmannschaft</p>
+    </section>
 
-<section id="bio">
-    <h2>Über uns</h2>
-    <p>Willkommen bei der Dart-Abteilung Spitzbuwe Weierbach! Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt.</p>
-    
-    <h3>🏠 Hauptverein</h3>
-    <img src="images/vfl_logo.png" alt="VfL Weierbach 1892 e.V.">
-    <p>VfL Weierbach 1892 e.V.</p>
-    
-    <h3>🤝 Partnerverein</h3>
-    <img src="images/partner_logo.png" alt="VfL Weierbach Damenmannschaft">
-    <p>VfL Weierbach Damenmannschaft</p>
-</section>
+    <nav>
+        <button id="menu-button">☰ Menü</button>
+        <ul id="menu">
+            <li><a href="#galerie">📸 Bildergalerie</a></li>
+            <li><a href="#spieler">🏆 Vereinsspieler</a></li>
+            <li><a href="#sponsoren">🤝 Sponsoren</a></li>
+            <li><a href="#kontakt">📩 Kontakt</a></li>
+        </ul>
+    </nav>
 
-<nav>
-    <button id="menuButton">☰ Menü</button>
-    <ul id="menuList" class="hidden">
-        <li><a href="#galerie">Bildergalerie</a></li>
-        <li><a href="#spieler">Vereinsspieler</a></li>
-        <li><a href="#sponsoren">Sponsoren</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-    </ul>
-</nav>
-
-<section id="galerie" class="hidden">
-    <h2>📸 Bildergalerie</h2>
-    <div class="gallery">
-        <img src="images/Vereinsheim_Vfl_Weierbach.jpg" alt="Vereinsheim">
-        <img src="images/Dart_Anlagen.jpg" alt="Dart Anlagen">
-    </div>
-</section>
-
-<section id="spieler" class="hidden">
-    <h2>🏆 Unsere Vereinsspieler</h2>
-    <div class="spieler-liste">
-        <div class="spieler"><img src="img/spieler1.jpg" alt="Spieler 1"><p>Matthias "The Underdog" Müller</p></div>
-        <div class="spieler"><img src="img/spieler2.jpg" alt="Spieler 2"><p>Marvin "The Wildfly" Wild</p></div>
-        <div class="spieler"><img src="img/spieler3.jpg" alt="Spieler 3"><p>Julian "Madhouse" Müller</p></div>
-        <div class="spieler"><img src="img/spieler4.jpg" alt="Spieler 4"><p>Georg "The Hammer" Hamelmann</p></div>
-        <div class="spieler"><img src="img/spieler5.jpg" alt="Spieler 5"><p>Sven "The Red Baron" Lempke</p></div>
-        <div class="spieler"><img src="img/spieler6.jpg" alt="Spieler 6"><p>Stefan "The Flash" Schlosser</p></div>
-        <div class="spieler"><img src="img/spieler7.jpg" alt="Spieler 7"><p>Björn "Rupprich"</p></div>
-        <div class="spieler"><img src="img/spieler8.jpg" alt="Spieler 8"><p>Niko "The Frozen Sniper" Müller</p></div>
-        <div class="spieler"><img src="img/spieler9.jpg" alt="Spieler 9"><p>Thomas "TK Finish" Keibel</p></div>
-        <div class="spieler"><img src="img/spieler10.jpg" alt="Spieler 10"><p>Tobias</p></div>
-        <div class="spieler"><img src="img/spieler11.jpg" alt="Spieler 11"><p>Christian "Dart Vader" Wagner</p></div>
-        <div class="spieler"><img src="img/spieler12.jpg" alt="Spieler 12"><p>Spieler 12</p></div>
-        <div class="spieler"><img src="img/spieler13.jpg" alt="Spieler 13"><p>Spieler 13</p></div>
-        <div class="spieler"><img src="img/spieler14.jpg" alt="Spieler 14"><p>Spieler 14</p></div>
-        <div class="spieler"><img src="img/spieler15.jpg" alt="Spieler 15"><p>Spieler 15</p></div>
-    </div>
-</section>
-
-<section id="sponsoren" class="hidden">
-    <h2>🤝 Unsere Sponsoren</h2>
-    <div class="sponsoren-liste">
-        <div class="sponsor">
-            <a href="https://www.glasfinish-folientechnik.de/" target="_blank">
-                <img src="images/Glasfinish.png" alt="Glasfinish">
-                <p>Glasfinish</p>
-            </a>
+    <section id="galerie">
+        <h2>📸 Bildergalerie</h2>
+        <div class="gallery">
+            <img src="images/Vereinsheim.jpg" alt="Vereinsheim Vfl Weierbach" class="zoom">
+            <img src="images/Dartanlagen.jpg" alt="Dart Anlagen" class="zoom">
         </div>
-        <div class="sponsor">
-            <a href="https://medimobil-gmbh.de/bernkastel-kues/" target="_blank">
-                <img src="images/Medimobil.png" alt="Medimobil">
-                <p>Medimobil</p>
-            </a>
+    </section>
+
+    <section id="spieler">
+        <h2>🏆 Unsere Vereinsspieler</h2>
+        <div class="spieler-liste">
+            <div class="spieler"><img src="img/spieler1.jpg" alt="Spieler 1"><p>Matthias "The Underdog" Müller</p></div>
+            <div class="spieler"><img src="img/spieler2.jpg" alt="Spieler 2"><p>Marvin "The Wildfly" Wild</p></div>
+            <div class="spieler"><img src="img/spieler3.jpg" alt="Spieler 3"><p>Julian "Madhouse" Müller</p></div>
+            <div class="spieler"><img src="img/spieler4.jpg" alt="Spieler 4"><p>Georg "The Hammer" Hamelmann</p></div>
+            <div class="spieler"><img src="img/spieler5.jpg" alt="Spieler 5"><p>Sven "The Red Baron" Lempke</p></div>
+            <div class="spieler"><img src="img/spieler6.jpg" alt="Spieler 6"><p>Stefan "The Flash" Schlosser</p></div>
+            <div class="spieler"><img src="img/spieler7.jpg" alt="Spieler 7"><p>Björn Rupprich</p></div>
+            <div class="spieler"><img src="img/spieler8.jpg" alt="Spieler 8"><p>Niko "The Frozen Sniper" Müller</p></div>
+            <div class="spieler"><img src="img/spieler9.jpg" alt="Spieler 9"><p>Thomas "TK Finish" Keibel</p></div>
+            <div class="spieler"><img src="img/spieler10.jpg" alt="Spieler 10"><p>Tobias</p></div>
+            <div class="spieler"><img src="img/spieler11.jpg" alt="Spieler 11"><p>Christian "Dart Vader" Wagner</p></div>
+            <div class="spieler"><img src="img/spieler12.jpg" alt="Spieler 12"></div>
+            <div class="spieler"><img src="img/spieler13.jpg" alt="Spieler 13"></div>
+            <div class="spieler"><img src="img/spieler14.jpg" alt="Spieler 14"></div>
+            <div class="spieler"><img src="img/spieler15.jpg" alt="Spieler 15"></div>
         </div>
-        <div class="sponsor">
-            <a href="https://www.ebay.de/str/elektromixshop2015/" target="_blank">
-                <img src="images/EMS.png" alt="EMS">
-                <p>EMS Elektro Mix Shop</p>
-            </a>
+    </section>
+
+    <section id="sponsoren">
+        <h2>🤝 Unsere Sponsoren</h2>
+        <div class="sponsoren-liste">
+            <div class="sponsor">
+                <a href="https://www.glasfinish-folientechnik.de/" target="_blank">
+                    <img src="images/Glasfinish.png" alt="Sponsor 1">
+                    <p>Glasfinish</p>
+                </a>
+            </div>
+            <div class="sponsor">
+                <a href="https://medimobil-gmbh.de/bernkastel-kues/" target="_blank">
+                    <img src="images/Medimobil.png" alt="Sponsor 2">
+                    <p>Medimobil</p>
+                </a>
+            </div>
+            <div class="sponsor">
+                <a href="https://www.ebay.de/str/elektromixshop2015/" target="_blank">
+                    <img src="images/EMS.png" alt="Sponsor 3">
+                    <p>EMS Elektro Mix Shop</p>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="kontakt" class="hidden">
-    <h2>📩 Kontakt</h2>
-    <p>Email: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
-    <p>📍 Adresse: Bein</p>
-</section>
+    <section id="kontakt">
+        <h2>📩 Kontakt</h2>
+        <p>Email: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
+        <p>📍 Adresse: Bein</p>
+    </section>
 
-<footer>
-    <p>Folge uns auf:</p>
-    <a href="https://www.instagram.com/spitzbuwe/" target="_blank">Instagram</a> | 
-    <a href="https://www.facebook.com/profile.php?id=61574211682391" target="_blank">Facebook</a>
-    <p>© 2025 Dart-Abteilung Spitzbuwe Weierbach</p>
-</footer>
-
+    <footer>
+        <p>Folge uns auf:</p>
+        <a href="https://www.instagram.com/spitzbuwe/" target="_blank">Instagram</a> | 
+        <a href="https://www.facebook.com/profile.php?id=61574211682391" target="_blank">Facebook</a>
+        <p>© 2025 Dart-Abteilung Spitzbuwe Weierbach</p>
+    </footer>
 </body>
 </html>
