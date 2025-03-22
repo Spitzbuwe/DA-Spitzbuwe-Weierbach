@@ -4,13 +4,14 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #ccffcc; /* Helles Grün */
+    color: #006600; /* Dunkleres Grün für Text */
 }
 
 header {
-    background-color: #333;
+    background: url('header-image.jpg') no-repeat center center/cover; /* Hintergrundbild für den Header */
     color: white;
-    padding: 10px 0;
+    padding: 40px 0;
     text-align: center;
 }
 
@@ -33,18 +34,27 @@ h1, h2 {
     margin: 0;
 }
 
+/* Sektionen mit hellgrünem Hintergrund */
 section {
     padding: 20px;
     margin: 20px;
-    background-color: white;
+    background: #b3ffb3; /* Helleres Grün */
     border-radius: 8px;
+    color: #004d00; /* Dunkleres Grün für besseren Kontrast */
 }
 
+/* Hintergrundbilder für Sektionen */
+section.background {
+    background: url('section-background.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
-    color: white;
+    background-color: #99e699; /* Helles Grün für den Footer */
+    color: #004d00;
 }
 
 /* Formular-Stile */
@@ -57,16 +67,27 @@ form input, form textarea {
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #66cc66; /* Mittleres Grün */
+    background-color: #e6ffe6; /* Sehr helles Grün */
+    color: #004d00;
 }
 
 form input[type="submit"] {
-    background-color: #333;
+    background-color: #66cc66; /* Mittelhelles Grün */
     color: white;
     border: none;
     cursor: pointer;
 }
 
 form input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #4caf50; /* Etwas dunkleres Grün beim Hover */
+}
+
+/* Bilder innerhalb von Abschnitten */
+section img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
 }
