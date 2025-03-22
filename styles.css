@@ -5,12 +5,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ccffcc; /* Helles Grün */
-    color: #006600; /* Dunkleres Grün für Text */
+    color: black; /* Schwarze Schrift */
 }
 
 header {
     background: url('header-image.jpg') no-repeat center center/cover; /* Hintergrundbild für den Header */
-    color: white;
+    color: black; /* Schwarze Schrift im Header */
     padding: 40px 0;
     text-align: center;
 }
@@ -26,7 +26,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: black; /* Schwarze Schrift für Links */
     text-decoration: none;
 }
 
@@ -40,13 +40,13 @@ section {
     margin: 20px;
     background: #b3ffb3; /* Helleres Grün */
     border-radius: 8px;
-    color: #004d00; /* Dunkleres Grün für besseren Kontrast */
+    color: black; /* Schwarze Schrift in den Sektionen */
 }
 
 /* Hintergrundbilder für Sektionen */
 section.background {
     background: url('section-background.jpg') no-repeat center center/cover;
-    color: white;
+    color: black; /* Schwarze Schrift in Hintergrund-Sektionen */
 }
 
 /* Footer */
@@ -54,7 +54,7 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #99e699; /* Helles Grün für den Footer */
-    color: #004d00;
+    color: black; /* Schwarze Schrift im Footer */
 }
 
 /* Formular-Stile */
@@ -69,12 +69,12 @@ form input, form textarea {
     border-radius: 5px;
     border: 1px solid #66cc66; /* Mittleres Grün */
     background-color: #e6ffe6; /* Sehr helles Grün */
-    color: #004d00;
+    color: black; /* Schwarze Schrift in den Formularfeldern */
 }
 
 form input[type="submit"] {
     background-color: #66cc66; /* Mittelhelles Grün */
-    color: white;
+    color: black; /* Schwarze Schrift im Submit-Button */
     border: none;
     cursor: pointer;
 }
