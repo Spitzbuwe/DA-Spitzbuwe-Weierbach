@@ -1,24 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let dropdown = document.querySelector(".dropbtn");
-    let menu = document.querySelector(".dropdown-content");
+    const menuButton = document.getElementById("menuButton");
+    const menuList = document.getElementById("menuList");
+    const sections = document.querySelectorAll("section.hidden");
 
-    dropdown.addEventListener("click", function () {
-        menu.style.display = menu.style.display === "block" ? "none" : "block";
+    menuButton.addEventListener("click", function () {
+        menuList.classList.toggle("hidden");
     });
 
-    document.addEventListener("click", function (event) {
-        if (!dropdown.contains(event.target) && !menu.contains(event.target)) {
-            menu.style.display = "none";
+    menuList.addEventListener("click", function (event) {
+        if (event.target.tagName === "A") {
+            sections.forEach(section => section.classList.add("hidden"));
+            const targetId = event.target.getAttribute("href").substring(1);
+            document.getElementById(targetId).classList.remove("hidden");
+            menuList.classList.add("hidden");
         }
-    });
-
-    document.querySelectorAll(".dropdown-content a").forEach(link => {
-        link.addEventListener("click", function () {
-            document.querySelectorAll("section.hidden").forEach(sec => sec.style.display = "none");
-            let target = document.querySelector(this.getAttribute("href"));
-            if (target) {
-                target.style.display = "block";
-            }
-        });
     });
 });
