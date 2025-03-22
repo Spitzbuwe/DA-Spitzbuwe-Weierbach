@@ -3,66 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DA Spitzbuwe Weierbach</title>
+    <title>Dart-Sportverein</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Willkommen bei der DA Spitzbuwe Weierbach</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Startseite</a></li>
-                <li><a href="#about">Über uns</a></li>
-                <li><a href="#events">Veranstaltungen</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
+        <h1>Willkommen beim Dart-Sportverein</h1>
     </header>
 
-    <section id="home">
-        <h2>Herzlich Willkommen!</h2>
-        <p>.</p>
-    </section>
-
-    <section id="about">
-        <h2>Über uns</h2>
-        <p>Wir sind die Dartabteilung des VfL Weierbach, gegründet am 1. März 2025. Unsere 11 aktiven Spieler trainieren  regelmäßig im Vereinsheim des VfL Weierbach.Im September schliessen wir uns der EHM Liga an.</p>
-    </section>
-
-    <section id="events">
-        <h2>Veranstaltungen</h2>
-        <p>Hier findest du eine Übersicht über unsere kommenden Veranstaltungen:</p>
+    <nav>
         <ul>
-            <li>Training Donnerstags ab 18 Uhr</li>
-            <li></li>
-            <li></li>
+            <li><a href="#galerie">Bildergalerie</a></li>
+            <li><a href="#turniere">Turniere</a></li>
+            <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
         </ul>
+    </nav>
+
+    <section id="galerie">
+        <h2>Bildergalerie</h2>
+        <div class="gallery">
+            <img src="img/dart1.jpg" alt="Dart Bild 1" class="zoom">
+            <img src="img/dart2.jpg" alt="Dart Bild 2" class="zoom">
+        </div>
     </section>
 
-    <section id="contact">
+    <section id="turniere">
+        <h2>Nächste Turniere</h2>
+        <p>📅 15. April – Stadtmeisterschaft</p>
+        <p>📅 30. Mai – Vereinsmeisterschaft</p>
+    </section>
+
+    <section id="mitgliedschaft">
+        <h2>Mitglied werden</h2>
+        <p>Interessiert? Schreibe uns eine Nachricht!</p>
+    </section>
+
+    <section id="kontakt">
         <h2>Kontakt</h2>
-        <p>Für Anfragen oder mehr Informationen, kontaktiere uns:</p>
-        <form action="mailto:dcspitzbuweweierbach@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-
-            <label for="email">E-Mail:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="message">Nachricht:</label><br>
-            <textarea id="message" name="message" required></textarea><br><br>
-
-            <input type="submit" value="Absenden">
-        </form>
+        <p>Email: info@dartverein.de</p>
+        <p>Adresse: Musterstraße 12, 12345 Stadt</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 DA Spitzbuwe Weierbach. Alle Rechte vorbehalten.</p>
+        <p>© 2025 Dart-Sportverein</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-<section>
-    <h2>Willkommen auf meiner Seite!</h2>
-    <img src="images/my-image.jpg" alt="Beschreibung des Bildes">
-</section>
