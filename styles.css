@@ -6,15 +6,28 @@ body {
     padding: 0;
 }
 
-.wappen {
-    max-width: 150px;
-    display: block;
-    margin: 0 auto;
+/* Wappen und Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: white;
 }
 
+.wappen {
+    max-width: 80px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+/* Menü links oben */
 nav {
-    text-align: center;
-    margin-top: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 #menu-button {
@@ -33,13 +46,14 @@ nav {
     border: 1px solid black;
     display: none;
     position: absolute;
-    left: 10px;
-    top: 50px;
+    left: 0;
+    top: 40px;
     width: 150px;
 }
 
 #menu li {
     padding: 10px;
+    text-align: left;
 }
 
 #menu.hidden {
@@ -50,9 +64,35 @@ nav {
     display: block;
 }
 
+/* Galerie */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+}
+
+/* Sponsoren */
+.sponsoren-liste {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sponsor img {
+    width: 120px;
+    height: auto;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background: black;
     color: white;
+    margin-top: 20px;
 }
