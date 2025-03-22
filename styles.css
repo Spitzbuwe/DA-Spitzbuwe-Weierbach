@@ -102,7 +102,6 @@ footer {
     padding: 10px;
     background-color: #99cc99;
 }
-
 header {
     display: flex;
     align-items: center;
@@ -117,17 +116,5 @@ header {
     height: auto;
     margin-right: 15px;
 }
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #99cc99;
-    padding: 20px;
-    text-align: center;
-}
 
-.wappen {
-    width: 80px;  /* Größe des Wappens anpassen */
-    height: auto;
-    margin-right: 15px;
-}
+
