@@ -11,4 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
             menu.style.display = "none";
         }
     });
+
+    document.querySelectorAll(".dropdown-content a").forEach(link => {
+        link.addEventListener("click", function () {
+            document.querySelectorAll("section.hidden").forEach(sec => sec.style.display = "none");
+            let target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                target.style.display = "block";
+            }
+        });
+    });
 });
