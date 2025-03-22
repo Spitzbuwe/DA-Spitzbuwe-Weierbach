@@ -32,7 +32,7 @@ nav button {
 }
 
 .gallery img {
-    max-width: 100px; /* Größe anpassen */
+    max-width: 80px; /* Größe anpassen */
     height: auto;
     margin: 10px;
 }
