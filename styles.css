@@ -31,6 +31,13 @@ nav button {
     cursor: pointer;
 }
 
+.wappen {
+    height: 60px; /* Größe anpassen */
+    width: auto; /* Automatische Breite */
+    display: block;
+    margin: 0 auto;
+}
+
 nav ul li a {
     color: white;
     text-decoration: none;
