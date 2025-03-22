@@ -8,7 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     menuButton.addEventListener("click", function () {
-        menu.classList.toggle("hidden");
+        if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+            menu.style.display = "block";
+        } else {
+            menu.classList.add("hidden");
+            menu.style.display = "none";
+        }
     });
 
     document.querySelectorAll("#menu a").forEach(link => {
@@ -18,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (target) {
                 target.classList.remove("hidden");
             }
+            menu.classList.add("hidden"); 
+            menu.style.display = "none"; 
         });
     });
 });
