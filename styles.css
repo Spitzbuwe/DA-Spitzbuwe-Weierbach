@@ -1,120 +1,33 @@
-body {
-    background-color: #ccffcc; /* Hellgrün */
-    color: black;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildergalerie - Spitzbuwe Weierbach</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-header {
-    background-color: #99cc99;
-    padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
-}
+    <header>
+        <img src="img/wappen.png" alt="Vereinswappen" class="wappen">
+        <h1>Bildergalerie</h1>
+    </header>
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    background: #77bb77;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
+    <nav>
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+        </ul>
+    </nav>
 
-nav ul li {
-    margin: 10px;
-}
+    <section class="gallery">
+        <img src="img/dart1.jpg" alt="Dart Bild 1" class="zoom">
+        <img src="img/dart2.jpg" alt="Dart Bild 2" class="zoom">
+    </section>
 
-nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background 0.3s ease;
-}
+    <footer>
+        <p>© 2025 Dart-Sportverein Spitzbuwe Weierbach</p>
+    </footer>
 
-nav a:hover {
-    background: #66aa66;
-    border-radius: 5px;
-}
-
-section {
-    margin: 30px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #005500;
-}
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.1);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 50%;
-    margin: 0 auto;
-}
-
-input {
-    padding: 8px;
-    border: 1px solid #005500;
-    border-radius: 5px;
-}
-
-button {
-    background: #005500;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #003300;
-}
-
-footer {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #99cc99;
-}
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #99cc99;
-    padding: 20px;
-    text-align: center;
-}
-
-.wappen {
-    width: 80px;  /* Größe des Wappens anpassen */
-    height: auto;
-    margin-right: 15px;
-}
-
-
+    <script src="script.js"></script>
+</body>
+</html>
