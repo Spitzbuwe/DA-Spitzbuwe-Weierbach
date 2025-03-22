@@ -1,20 +1,14 @@
-// Bilder per Klick vergrößern
-document.querySelectorAll(".zoom").forEach(img => {
-    img.addEventListener("click", () => {
-        if (img.style.transform === "scale(2)") {
-            img.style.transform = "scale(1)";
-        } else {
-            img.style.transform = "scale(2)";
-        }
-    });
-});
+document.addEventListener("DOMContentLoaded", function () {
+    let dropdown = document.querySelector(".dropbtn");
+    let menu = document.querySelector(".dropdown-content");
 
-// Sanfter Scroll-Effekt für die Navigation
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", function(event) {
-        event.preventDefault();
-        const targetId = this.getAttribute("href").substring(1);
-        const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({ behavior: "smooth" });
+    dropdown.addEventListener("click", function () {
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!dropdown.contains(event.target) && !menu.contains(event.target)) {
+            menu.style.display = "none";
+        }
     });
 });
