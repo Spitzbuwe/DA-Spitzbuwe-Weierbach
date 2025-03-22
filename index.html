@@ -9,86 +9,82 @@
 <body>
 
     <header>
-        <img src="images/Wappen.png" alt="Vereinswappen" class="wappen">
+        <img src="images/wappen.png" alt="Vereinswappen" class="wappen">
         <h1>Dart-Sportverein Spitzbuwe Weierbach</h1>
+
+        <!-- Dropdown-Menü mit allen Kategorien außer Über uns -->
+        <nav class="dropdown">
+            <button class="dropbtn">Menü</button>
+            <div class="dropdown-content">
+                <a href="#training">📅 Trainingstag</a>
+                <a href="#galerie">📸 Bildergalerie</a>
+                <a href="#spieler">🏆 Vereinsspieler</a>
+                <a href="#sponsoren">🤝 Sponsoren</a>
+                <a href="#kontakt">📩 Kontakt</a>
+                <a href="#social-media">🔗 Social Media</a>
+            </div>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#ueber-uns">Über uns</a></li>
-            <li><a href="#kategorien">Kategorien</a>
-                <ul>
-                    <li><a href="#galerie">Bildergalerie</a></li>
-                    <li><a href="#spieler">Vereinsspieler</a></li>
-                    <li><a href="#sponsoren">Sponsoren</a></li>
-                    <li><a href="#kontakt">Social Media & Kontakt</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <main>
+        <section id="ueber-uns">
+            <h2>🏅 Über uns</h2>
+            <p>Der Dart-Sportverein Spitzbuwe Weierbach wurde gegründet, um unsere Leidenschaft für Darts zu teilen. Wir trainieren regelmäßig und nehmen an Turnieren teil.</p>
+        </section>
 
-    <section id="ueber-uns">
-        <h2>🏅 Über uns</h2>
-        <p>Der Dart-Sportverein Spitzbuwe Weierbach wurde am 01.03.2025 gegründet, und hat bereits 11 Aktive Spieler. Wir trainieren regelmäßig und wollen ab September An der EHM Liga teilnehmen.</p>
-        <p>📅 Trainingstag: Donnerstags ab 18 Uhr im Vereinsheim.</p>
-    </section>
+        <section id="training">
+            <h2>📅 Trainingstag</h2>
+            <p>Unser Training findet jeden **Donnerstag ab 18 Uhr** im Vereinsheim statt.</p>
+        </section>
 
-    <section id="galerie">
-        <h2>📸 Bildergalerie</h2>
-        <div class="gallery">
-            <img src="images/Verinsheim Vfl Weierbach.jpg" alt="Dart Bild 1" class="zoom">
-            <img src="images/Dart Anlagen.jpg" alt="Dart Bild 2" class="zoom">
-        </div>
-    </section>
-
-   <section id="spieler">
-    <h2>🏆 Unsere Vereinsspieler</h2>
-    <div class="spieler-liste">
-        <div class="spieler"><img src="img/spieler1.jpg" alt="Spieler 1"><p>Matthias "The Underdog" Müller</p></div>
-        <div class="spieler"><img src="img/spieler2.jpg" alt="Spieler 2"><p>Marvin "The Wildfly" Wild</p></div>
-        <div class="spieler"><img src="img/spieler3.jpg" alt="Spieler 3"><p>Julian "Madhouse" Müller</p></div>
-        <div class="spieler"><img src="img/spieler4.jpg" alt="Spieler 4"><p>Georg "The Hammer" Hamelmannr</p></div>
-        <div class="spieler"><img src="img/spieler5.jpg" alt="Spieler 5"><p>Sven "The Red Baron" Lempke</p></div>
-        <div class="spieler"><img src="img/spieler6.jpg" alt="Spieler 6"><p>Stefan "The Flash" Schlosser</p></div>
-        <div class="spieler"><img src="img/spieler7.jpg" alt="Spieler 7"><p>Björn "" Rupprich</p></div>
-        <div class="spieler"><img src="img/spieler8.jpg" alt="Spieler 8"><p>Niko "The Frozen Sniper" Müller</p></div>
-        <div class="spieler"><img src="img/spieler9.jpg" alt="Spieler 9"><p>Thomas "TK Finish" Keibel</p></div>
-        <div class="spieler"><img src="img/spieler10.jpg" alt="Spieler 10"><p>Tobias "" </p></div>
-        <div class="spieler"><img src="img/spieler11.jpg" alt="Spieler 11"><p>Christian "Dart Vader" Wagner</p></div>
-        
-    </div>
-</section>
-
-
-    <section id="sponsoren">
-        <h2>🤝 Unsere Sponsoren</h2>
-        <div class="sponsoren-liste">
-            <div class="sponsor">
-                <a href="https://www.glasfinish-folientechnik.de/" target="_blank">
-                    <img src="images/Glasfinish.png" alt="Sponsor 1">
-                    <p>Glasfinish</p>
-                </a>
+        <section id="galerie">
+            <h2>📸 Bildergalerie</h2>
+            <div class="gallery">
+                <img src="images/Verinsheim Vfl Weierbach.jpg" alt="Vereinsheim" class="zoom">
+                <img src="images/Dart Anlagen.jpg" alt="Dart Anlagen" class="zoom">
             </div>
-            <div class="sponsor">
-                <a href="https://medimobil-gmbh.de/bernkastel-kues/" target="_blank">
-                    <img src="images/Medimobil.png" alt="Sponsor 2">
-                    <p>Medimobil</p>
-                </a>
-            </div>
-       <div class="sponsor">
-                <a href="https://www.ebay.de/str/elektromixshop2015?srsltid=AfmBOoon0SbOcrOQlwSPP_rPZO0cDJumqzzUPppVH3JV4isk6Dj2mJck/" target="_blank">
-                    <img src="images/EMS.png" alt="Sponsor 2">
-                    <p>EMS Elektro Mix Shop</p>
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="kontakt">
-        <h2>📩 Kontakt</h2>
-        <p>Email: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
-        <p>📍 Adresse: Bein</p>
-    </section>
+        <section id="spieler">
+            <h2>🏆 Unsere Vereinsspieler</h2>
+            <div class="spieler-liste">
+                <div class="spieler"><img src="img/spieler1.jpg" alt="Spieler 1"><p>Matthias "The Underdog" Müller</p></div>
+                <div class="spieler"><img src="img/spieler2.jpg" alt="Spieler 2"><p>Marvin "The Wildfly" Wild</p></div>
+                <div class="spieler"><img src="img/spieler3.jpg" alt="Spieler 3"><p>Julian "Madhouse" Müller</p></div>
+            </div>
+        </section>
+
+        <section id="sponsoren">
+            <h2>🤝 Unsere Sponsoren</h2>
+            <div class="sponsoren-liste">
+                <div class="sponsor">
+                    <a href="https://www.glasfinish-folientechnik.de/" target="_blank">
+                        <img src="images/Glasfinish.png" alt="Sponsor Glasfinish">
+                        <p>Glasfinish</p>
+                    </a>
+                </div>
+                <div class="sponsor">
+                    <a href="https://medimobil-gmbh.de/bernkastel-kues/" target="_blank">
+                        <img src="images/Medimobil.png" alt="Sponsor Medimobil">
+                        <p>Medimobil</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontakt">
+            <h2>📩 Kontakt</h2>
+            <p>Email: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
+            <p>📍 Adresse: Bein</p>
+        </section>
+
+        <section id="social-media">
+            <h2>🔗 Social Media</h2>
+            <p>Folge uns auf:</p>
+            <a href="https://www.instagram.com/spitzbuwe/" target="_blank">Instagram</a> | 
+            <a href="https://www.facebook.com/profile.php?id=61574211682391" target="_blank">Facebook</a>
+        </section>
+    </main>
 
     <footer>
         <p>Folge uns auf:</p>
