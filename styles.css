@@ -1,54 +1,104 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dart-Sportverein</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Willkommen beim Dart-Sportverein</h1>
-    </header>
+body {
+    background-color: #ccffcc; /* Hellgrün */
+    color: black;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
-    <nav>
-        <ul>
-            <li><a href="#galerie">Bildergalerie</a></li>
-            <li><a href="#turniere">Turniere</a></li>
-            <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-    </nav>
+header {
+    background-color: #99cc99;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
 
-    <section id="galerie">
-        <h2>Bildergalerie</h2>
-        <div class="gallery">
-            <img src="img/dart1.jpg" alt="Dart Bild 1" class="zoom">
-            <img src="img/dart2.jpg" alt="Dart Bild 2" class="zoom">
-        </div>
-    </section>
+nav ul {
+    list-style: none;
+    padding: 0;
+    background: #77bb77;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
 
-    <section id="turniere">
-        <h2>Nächste Turniere</h2>
-        <p>📅 15. April – Stadtmeisterschaft</p>
-        <p>📅 30. Mai – Vereinsmeisterschaft</p>
-    </section>
+nav ul li {
+    margin: 10px;
+}
 
-    <section id="mitgliedschaft">
-        <h2>Mitglied werden</h2>
-        <p>Interessiert? Schreibe uns eine Nachricht!</p>
-    </section>
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
 
-    <section id="kontakt">
-        <h2>Kontakt</h2>
-        <p>Email: info@dartverein.de</p>
-        <p>Adresse: Musterstraße 12, 12345 Stadt</p>
-    </section>
+nav a:hover {
+    background: #66aa66;
+    border-radius: 5px;
+}
 
-    <footer>
-        <p>© 2025 Dart-Sportverein</p>
-    </footer>
+section {
+    margin: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+h2 {
+    color: #005500;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #005500;
+    border-radius: 5px;
+}
+
+button {
+    background: #005500;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #003300;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #99cc99;
+}
