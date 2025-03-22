@@ -13,7 +13,6 @@ header {
     justify-content: left;
     background-color: #99cc99;
     padding: 20px;
-    text-align: center;
 }
 
 .wappen {
@@ -78,31 +77,15 @@ img:hover {
     transform: scale(1.1);
 }
 
-form {
+.spieler-liste, .sponsoren-liste {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 50%;
-    margin: 0 auto;
+    justify-content: center;
+    gap: 20px;
 }
 
-input {
-    padding: 8px;
-    border: 1px solid #005500;
-    border-radius: 5px;
-}
-
-button {
-    background: #005500;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #003300;
+.sponsor a {
+    text-decoration: none;
+    color: black;
 }
 
 footer {
