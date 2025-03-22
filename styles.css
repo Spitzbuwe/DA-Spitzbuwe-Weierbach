@@ -1,93 +1,54 @@
-/* Grundlegendes Layout */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #ccffcc; /* Helles Grün */
-    color: black; /* Schwarze Schrift */
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart-Sportverein</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Willkommen beim Dart-Sportverein</h1>
+    </header>
 
-header {
-    background: url('header-image.jpg') no-repeat center center/cover; /* Hintergrundbild für den Header */
-    color: black; /* Schwarze Schrift im Header */
-    padding: 40px 0;
-    text-align: center;
-}
+    <nav>
+        <ul>
+            <li><a href="#galerie">Bildergalerie</a></li>
+            <li><a href="#turniere">Turniere</a></li>
+            <li><a href="#mitgliedschaft">Mitgliedschaft</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
+    <section id="galerie">
+        <h2>Bildergalerie</h2>
+        <div class="gallery">
+            <img src="img/dart1.jpg" alt="Dart Bild 1" class="zoom">
+            <img src="img/dart2.jpg" alt="Dart Bild 2" class="zoom">
+        </div>
+    </section>
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
+    <section id="turniere">
+        <h2>Nächste Turniere</h2>
+        <p>📅 15. April – Stadtmeisterschaft</p>
+        <p>📅 30. Mai – Vereinsmeisterschaft</p>
+    </section>
 
-header nav ul li a {
-    color: black; /* Schwarze Schrift für Links */
-    text-decoration: none;
-}
+    <section id="mitgliedschaft">
+        <h2>Mitglied werden</h2>
+        <p>Interessiert? Schreibe uns eine Nachricht!</p>
+    </section>
 
-h1, h2 {
-    margin: 0;
-}
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <p>Email: info@dartverein.de</p>
+        <p>Adresse: Musterstraße 12, 12345 Stadt</p>
+    </section>
 
-/* Sektionen mit hellgrünem Hintergrund */
-section {
-    padding: 20px;
-    margin: 20px;
-    background: #b3ffb3; /* Helleres Grün */
-    border-radius: 8px;
-    color: black; /* Schwarze Schrift in den Sektionen */
-}
+    <footer>
+        <p>© 2025 Dart-Sportverein</p>
+    </footer>
 
-/* Hintergrundbilder für Sektionen */
-section.background {
-    background: url('section-background.jpg') no-repeat center center/cover;
-    color: black; /* Schwarze Schrift in Hintergrund-Sektionen */
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #99e699; /* Helles Grün für den Footer */
-    color: black; /* Schwarze Schrift im Footer */
-}
-
-/* Formular-Stile */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form input, form textarea {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #66cc66; /* Mittleres Grün */
-    background-color: #e6ffe6; /* Sehr helles Grün */
-    color: black; /* Schwarze Schrift in den Formularfeldern */
-}
-
-form input[type="submit"] {
-    background-color: #66cc66; /* Mittelhelles Grün */
-    color: black; /* Schwarze Schrift im Submit-Button */
-    border: none;
-    cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-    background-color: #4caf50; /* Etwas dunkleres Grün beim Hover */
-}
-
-/* Bilder innerhalb von Abschnitten */
-section img {
-    width: 100%;
-    max-width: 600px;
-    display: block;
-    margin: 10px auto;
-    border-radius: 8px;
-}
+    <script src="script.js"></script>
+</body>
+</html>
