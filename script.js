@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
 const menu = document.getElementById("menu");
 
 // Falls die Elemente nicht gefunden werden, Fehler in der Konsole ausgeben
-if (!menuButton || !menu) {
-    console.error("❌ Fehler: Menü-Button oder Menü nicht gefunden!");
-    return;
+if (!menuButton || !menu) { 
+    console.error("Fehler: Menü-Button oder Menü nicht gefunden!");
+}
+
 }
 
     }
