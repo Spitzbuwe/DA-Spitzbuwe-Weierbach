@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccffcc; /* Hellgrün */
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile für Dropdown-Menü */
+nav {
+    background-color: #008000;
+    padding: 10px;
+}
+
+nav button {
+    background: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+nav ul li {
+    padding: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
