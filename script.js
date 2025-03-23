@@ -1,28 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
-    window.showSection = function (id) {
-        document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
-        let section = document.getElementById(id);
-        if (section) section.classList.remove("hidden");
+    console.log("JavaScript geladen.");
+
+    // Funktion zum Anzeigen bestimmter Sektionen
+    window.showOnly = function (sectionId) {
+        let sections = document.querySelectorAll("section");
+        sections.forEach(section => {
+            section.style.display = (section.id === sectionId) ? "block" : "none";
+        });
     };
 
-    document.querySelectorAll(".menu-item > a").forEach(menu => {
-        menu.addEventListener("click", function (event) {
-            event.preventDefault();
-            let dropdown = this.nextElementSibling;
-            if (dropdown) dropdown.classList.toggle("show");
+    // Galerie Bilder vergrößern
+    document.querySelectorAll(".gallery img").forEach(img => {
+        img.addEventListener("click", function () {
+            let overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.backgroundColor = "rgba(0,0,0,0.8)";
+            overlay.style.display = "flex";
+            overlay.style.justifyContent = "center";
+            overlay.style.alignItems = "center";
+            overlay.style.zIndex = "1000";
+
+            let imgClone = document.createElement("img");
+            imgClone.src = this.src;
+            imgClone.style.maxWidth = "80%";
+            imgClone.style.maxHeight = "80%";
+            imgClone.style.border = "5px solid white";
+            imgClone.style.borderRadius = "10px";
+
+            overlay.appendChild(imgClone);
+            overlay.addEventListener("click", function () {
+                document.body.removeChild(overlay);
+            });
+
+            document.body.appendChild(overlay);
         });
     });
 
-    document.addEventListener("click", function (event) {
-        if (!event.target.closest(".menu-item")) {
-            document.querySelectorAll(".dropdown").forEach(dropdown => {
-                dropdown.classList.remove("show");
-            });
-        }
-    });
-
-    let count = localStorage.getItem("visitorCount") || 0;
-    count++;
-    localStorage.setItem("visitorCount", count);
-    document.getElementById("visitor-count").innerText = count;
-});
+    // Ligatabelle automatisch sortieren
+    function sortTable() {
+        let table = document.getElementById("ligatabelle
