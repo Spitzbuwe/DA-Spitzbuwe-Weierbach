@@ -12,72 +12,85 @@
             background-color: #5CC14A;
             color: #CCCBCD;
             font-family: Arial, sans-serif;
+            margin: 0;
         }
         header {
             background-color: #63C351;
-            padding: 10px;
+            padding: 10px 0;
             text-align: center;
         }
-        .dropdown {
-            position: relative;
-            display: inline-block;
+        nav {
+            background-color: #62C250;
+            display: flex;
+            justify-content: center;
         }
-        .dropdown-content {
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav ul li a {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #61C24D;
+        }
+        /* Dropdown Menü */
+        nav ul li ul {
             display: none;
             position: absolute;
             background-color: #62C250;
-            min-width: 160px;
+            list-style: none;
+            padding: 0;
+            min-width: 180px;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
             box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
         }
-        .dropdown:hover .dropdown-content {
+        nav ul li:hover ul {
             display: block;
         }
-        .dropdown-content a {
-            color: #000;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
+        nav ul li ul li {
+            width: 100%;
         }
-        .dropdown-content a:hover {
-            background-color: #61C24D;
-        }
-        .hidden {
-            display: none;
-        }
-        .gallery img {
-            width: 150px;
-            height: auto;
-            margin: 5px;
-            cursor: pointer;
-        }
-        .sponsor img {
-            width: 100px;
-            height: auto;
-            margin-right: 10px;
+        .content {
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
         <img src="Wappen.png" alt="Dart-Abteilung Wappen" width="100">
-        <nav>
-            <div class="dropdown">
-                <button class="dropbtn">Menü</button>
-                <div class="dropdown-content">
-                    <a href="#home">Startseite</a>
-                    <a href="#training">Training</a>
-                    <a href="#spieler">Vereinsspieler</a>
-                    <a href="#sponsoren-list">Sponsoren</a>
-                    <a href="#galerie">Bildergalerie</a>
-                    <a href="#bio">Über uns</a>
-                    <a href="#kontakt">Kontakt</a>
-                </div>
-            </div>
-        </nav>
     </header>
 
-    <main>
+    <nav>
+        <ul>
+            <li><a href="#home">Startseite</a></li>
+            <li><a href="#training">Training</a></li>
+            <li>
+                <a href="#">Verein</a>
+                <ul>
+                    <li><a href="#spieler">Vereinsspieler</a></li>
+                    <li><a href="#bio">Über uns</a></li>
+                </ul>
+            </li>
+            <li><a href="#sponsoren-list">Sponsoren</a></li>
+            <li><a href="#galerie">Bildergalerie</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
         <section id="home">
             <h1>Willkommen bei der Dart-Abteilung des VfL Weierbach</h1>
             <p>Hier erfährst du alles über unser Team, unser Training und die Veranstaltungen!</p>
@@ -88,7 +101,7 @@
             <p>Jeden Donnerstag ab 18 Uhr im Vereinsheim.</p>
         </section>
 
-        <section id="spieler" class="hidden">
+        <section id="spieler">
             <h2>Vereinsspieler</h2>
             <ul>
                 <li>Matthias "The Underdog" Müller</li>
@@ -105,7 +118,7 @@
             </ul>
         </section>
 
-        <section id="galerie" class="hidden">
+        <section id="galerie">
             <h2>Bildergalerie</h2>
             <div class="gallery">
                 <img src="Vereinsheim-Weierbach.jpg" alt="Vereinsheim Weierbach">
@@ -113,7 +126,7 @@
             </div>
         </section>
 
-        <section id="sponsoren-list" class="hidden">
+        <section id="sponsoren-list">
             <h2>Unsere Sponsoren</h2>
             <div class="sponsor">
                 <a href="https://www.glasfinish-folientechnik.de/" target="_blank">
@@ -135,7 +148,7 @@
             </div>
         </section>
 
-        <section id="bio" class="hidden">
+        <section id="bio">
             <h2>Über uns</h2>
             <p>Wir sind die Dart-Abteilung des VfL Weierbach, gegründet am 01. März 2025.  
                Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt.  
@@ -149,7 +162,7 @@
             <p>Folge uns auf <a href="https://www.instagram.com/vflweierbach">Instagram</a> und 
             <a href="https://www.facebook.com/vflweierbach">Facebook</a></p>
         </section>
-    </main>
+    </div>
 
     <footer>
         <p>&copy; 2025 Dart-Abteilung VfL Weierbach | Alle Rechte vorbehalten</p>
