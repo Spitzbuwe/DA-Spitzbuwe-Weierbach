@@ -12,11 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     
+    window.showOnly = showOnly; // Damit showOnly global verfügbar ist
+
     // Dropdown-Menü Funktion
     const dropdowns = document.querySelectorAll(".dropdown");
     dropdowns.forEach(dropdown => {
-        dropdown.addEventListener("click", function () {
-            this.classList.toggle("active");
+        dropdown.addEventListener("mouseenter", function () {
+            this.querySelector(".dropdown-content").classList.add("visible");
+        });
+        dropdown.addEventListener("mouseleave", function () {
+            this.querySelector(".dropdown-content").classList.remove("visible");
         });
     });
 });
