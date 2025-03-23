@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-
-    calculateTable();
 });
 
 function showSection(id) {
@@ -20,8 +18,4 @@ function showSection(id) {
     }
     document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
     section.classList.remove("hidden");
-}
-
-function calculateTable() {
-    console.log("Tabelle aktualisiert");
 }
