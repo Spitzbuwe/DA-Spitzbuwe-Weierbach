@@ -1,34 +1,26 @@
+/* Allgemeine Stile */
 body {
     font-family: Arial, sans-serif;
+    background-color: #ccffcc;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
+/* Header-Stil */
 .header-container {
+    background-color: black;
+    color: white;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
 }
 
-.menu-bio-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
+/* Menü-Stil */
 .nav-container {
-    width: 25%;
     text-align: left;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
 }
 
 .dropbtn {
@@ -48,21 +40,35 @@ body {
     z-index: 1;
 }
 
-.dropdown-content a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+/* Versteckte Sektionen */
 .hidden {
     display: none;
+}
+
+/* Galerie-Stil */
+.gallery img {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Sponsorenlogos */
+.sponsor img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: black;
+    color: white;
 }
