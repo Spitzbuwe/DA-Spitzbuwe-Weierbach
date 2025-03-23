@@ -47,22 +47,6 @@ nav ul li a {
     display: block;
 }
 
-/* Dropdown-Menü */
-.dropdown {
-    display: none;
-    position: absolute;
-    background-color: #62C250;
-    list-style: none;
-    padding: 0;
-    min-width: 180px;
-    top: 100%;
-    left: 0;
-}
-
-.menu-item:hover .dropdown {
-    display: block;
-}
-
 /* Galerie */
 .gallery img {
     width: 150px;
@@ -77,7 +61,7 @@ nav ul li a {
 
 /* Social Media */
 .social-links img {
-    width: 30px;
+    width: 40px;
     margin: 5px;
 }
 
