@@ -3,135 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dart-Abteilung Spitzbuwe Weierbach</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="./script.js"></script>
+    <title>Dart-Club Menü</title>
     <style>
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center; 
-            text-align: center;
-        }
-        .wappen {
-            height: 80px;
-            width: auto;
-        }
+        /* Menü-Styling */
         nav {
-            background-color: black;
+            display: flex;
+            background-color: #333;
             padding: 10px;
-            display: flex;
-            justify-content: center;
         }
-        #menu {
-            display: flex;
-            gap: 20px;
-            list-style: none;
-        }
-        #menu li a {
+        nav a {
             color: white;
+            padding: 10px 20px;
             text-decoration: none;
-            padding: 10px 15px;
-            background-color: gray;
-            border-radius: 5px;
+            cursor: pointer;
         }
-        #menu li a:hover {
-            background-color: white;
-            color: black;
+        nav a:hover {
+            background-color: #555;
         }
-        #sponsoren-list {
+
+        /* Dropdown-Menü für Veranstaltungen & Sponsoren */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
             display: none;
-            background-color: lightgray;
+            position: absolute;
+            background-color: #444;
+            min-width: 150px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            display: block;
+            color: white;
             padding: 10px;
-            margin-top: 10px;
-            border-radius: 5px;
-            text-align: center;
+            text-decoration: none;
         }
-        .hidden {
+        .dropdown-content a:hover {
+            background-color: #666;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Alle Sektionen außer Bio standardmäßig verstecken */
+        .content {
             display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+        }
+
+        /* Bio ist standardmäßig sichtbar */
+        #bio {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Dart-Abteilung Spitzbuwe Weierbach</h1>
-        <img src="Wappen.png" alt="Vereinswappen" class="wappen">
-        <h2>Hauptverein: VfL Weierbach 1892 e.V.</h2>
-        <img src="Vfl-Weierbach.png" alt="VfL Weierbach Wappen">
-    </header>
 
-    <nav>
-        <ul id="menu">
-            <li><a href="#" onclick="showOnly('spieler')">Vereinsspieler</a></li>
-            <li><a href="#" onclick="showOnly('galerie')">Bildergalerie</a></li>
-            <li><a href="https://www.instagram.com/spitzbuwe/" target="_blank">Instagram</a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=61574211682391" target="_blank">Facebook</a></li>
-            <li><a href="#" onclick="showOnly('sponsoren-list')">Sponsoren</a></li>
-        </ul>
-    </nav>
-
-    <section id="spieler" class="hidden">
-        <h2>Vereinsspieler</h2>
-        <ul>
-            <li>Matthias "The Underdog" Müller</li>
-            <li>Marvin "The Wildfly" Wild</li>
-            <li>Julian "Madhouse" Müller</li>
-            <li>Georg "The Hammer" Hamelmann</li>
-            <li>Sven "The Red Baron" Lempke</li>
-            <li>Stefan "The Flash" Schlosser</li>
-            <li>Björn Rupprich</li>
-            <li>Niko "The Frozen Sniper" Müller</li>
-            <li>Thomas "TK Finish" Keibel</li>
-            <li>Tobias</li>
-            <li>Christian "Dart Vader" Wagner</li>
-        </ul>
-    </section>
-
-    <div id="sponsoren-list" class="hidden">
-        <h2>Sponsoren</h2>
-        <div class="sponsor">
-            <a href="https://www.glasfinish-folientechnik.de/" target="_blank">
-                <img src="Glasfinish.png" alt="Glasfinish Logo">
-            </a>
-        </div>
-        <div class="sponsor">
-            <a href="https://medimobil-gmbh.de/bernkastel-kues/" target="_blank">
-                <img src="Medimobil.png" alt="Medimobil Logo">
-            </a>
-        </div>
-        <div class="sponsor">
-            <a href="https://www.ebay.de/str/elektromixshop2016" target="_blank">
-                <img src="EMS.png" alt="EMS Elektro Mix Shop Logo">
-            </a>
+<!-- Menü -->
+<nav>
+    <a href="#" onclick="toggleSection('spieler')">Vereinsspieler</a>
+    <div class="dropdown">
+        <a href="#">Sponsoren</a>
+        <div class="dropdown-content">
+            <a href="#" onclick="toggleSection('sponsor_glasfinish')">Glasfinish</a>
+            <a href="#" onclick="toggleSection('sponsor_medimobil')">Medimobil</a>
+            <a href="#" onclick="toggleSection('sponsor_ems')">EMS Elektro Mix Shop</a>
         </div>
     </div>
-
-    <section id="galerie" class="hidden">
-        <h2>Bildergalerie</h2>
-        <div class="gallery">
-            <img src="Vereinsheim-Weierbach.jpg" alt="Vereinsheim">
-            <img src="Dart-Anlagen.jpg" alt="Dart Anlage">
+    <a href="#" onclick="toggleSection('galerie')">Bildergalerie</a>
+    <div class="dropdown">
+        <a href="#">Veranstaltungen</a>
+        <div class="dropdown-content">
+            <a href="#" onclick="toggleSection('spieltage')">Spieltage</a>
+            <a href="#" onclick="toggleSection('ergebnisse')">Ergebnisse</a>
         </div>
-    </section>
+    </div>
+    <a href="#" onclick="toggleSection('facebook')">Facebook</a>
+    <a href="#" onclick="toggleSection('instagram')">Instagram</a>
+</nav>
 
-    <footer>
-        <p>Kontakt: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
-    </footer>
+<!-- Bio auf der Startseite -->
+<section id="bio">
+    <h2>Über uns</h2>
+    <p>Wir sind die Dart-Abteilung des VfL Weierbach, gegründet am 01. März 2025. Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt. Ab September nehmen wir an der EHM-Liga teil. Derzeit besteht unser Team aus 11 aktiven Spielern. 🎯</p>
+</section>
 
-    <script>
-        function showOnly(sectionId) {
-            let sections = ["spieler", "galerie", "sponsoren-list"];
-            sections.forEach(id => {
-                let element = document.getElementById(id);
-                if (element) {
-                    if (id === sectionId) {
-                        element.classList.remove("hidden");
-                    } else {
-                        element.classList.add("hidden");
-                    }
-                }
-            });
+<!-- Inhalte (alle standardmäßig versteckt außer Bio) -->
+<div id="spieler" class="content">
+    <h2>Unsere Vereinsspieler</h2>
+    <ul>
+        <li>Matthias "The Underdog" Müller</li>
+        <li>Marvin "The Wildfly" Wild</li>
+        <li>Julian "Madhouse" Müller</li>
+        <li>Georg "The Hammer" Hamelmann</li>
+        <li>Sven "The Red Baron" Lempke</li>
+        <li>Stefan "The Flash" Schlosser</li>
+        <li>Björn Rupprich</li>
+        <li>Niko "The Frozen Sniper" Müller</li>
+        <li>Thomas "TK Finish" Keibel</li>
+        <li>Tobias</li>
+        <li>Christian "Dart Vader" Wagner</li>
+    </ul>
+</div>
+
+<!-- Sponsoren Details mit klickbaren Logos -->
+<div id="sponsor_glasfinish" class="content">
+    <h2>Glasfinish</h2>
+    <a href="https://www.glasfinish.de" target="_blank">
+        <img src="glasfinish-logo.jpg" alt="Glasfinish Logo" width="200">
+    </a>
+</div>
+
+<div id="sponsor_medimobil" class="content">
+    <h2>Medimobil</h2>
+    <a href="https://www.medimobil.de" target="_blank">
+        <img src="medimobil-logo.jpg" alt="Medimobil Logo" width="200">
+    </a>
+</div>
+
+<div id="sponsor_ems" class="content">
+    <h2>EMS Elektro Mix Shop</h2>
+    <a href="https://www.ems-elektro.de" target="_blank">
+        <img src="ems-logo.jpg" alt="EMS Elektro Mix Shop Logo" width="200">
+    </a>
+</div>
+
+<div id="galerie" class="content">
+    <h2>Bildergalerie</h2>
+    <p>Hier sind die Bilder des Vereins...</p>
+</div>
+
+<div id="spieltage" class="content">
+    <h2>Spieltage</h2>
+    <p>Hier werden die kommenden Spiele aufgelistet...</p>
+</div>
+
+<div id="ergebnisse" class="content">
+    <h2>Ergebnisse</h2>
+    <p>Hier stehen die neuesten Spielergebnisse...</p>
+</div>
+
+<div id="facebook" class="content">
+    <h2>Facebook</h2>
+    <p><a href="https://www.facebook.com/profile.php?id=61574211682391" target="_blank">Besuche uns auf Facebook</a></p>
+</div>
+
+<div id="instagram" class="content">
+    <h2>Instagram</h2>
+    <p><a href="https://www.instagram.com/spitzbuwe/" target="_blank">Besuche uns auf Instagram</a></p>
+</div>
+
+<script>
+    function toggleSection(sectionId) {
+        // Alle Sektionen außer Bio verstecken
+        let sections = document.querySelectorAll('.content');
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        // Gewählte Sektion einblenden
+        let selectedSection = document.getElementById(sectionId);
+        if (selectedSection.style.display === 'none' || selectedSection.style.display === '') {
+            selectedSection.style.display = 'block';
         }
-    </script>
+
+        // Bio verstecken, wenn eine andere Sektion geöffnet wird
+        document.getElementById('bio').style.display = 'none';
+    }
+</script>
+
 </body>
 </html>
