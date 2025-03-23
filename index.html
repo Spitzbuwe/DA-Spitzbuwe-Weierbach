@@ -3,115 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DC Spitzbuwe Weierbach</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ccffcc;
-            color: black;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            padding: 20px;
-        }
-        nav {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: black;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .menu {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 10px;
-            background: white;
-            color: black;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .menu a {
-            display: block;
-            color: black;
-            text-decoration: none;
-            padding: 5px;
-        }
-        .content {
-            padding: 20px;
-        }
-        .gallery img, .sponsor img {
-            width: 200px;
-            height: auto;
-            margin: 10px;
-        }
-        footer {
-            margin-top: 20px;
-            padding: 10px;
-            background: black;
-            color: white;
-        }
-    </style>
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
+    <title>Dart-Abteilung Spitzbuwe Weierbach</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <img src="Wappen.png" alt="Vereinswappen" width="150">
-        <h1>DC Spitzbuwe Weierbach</h1>
+        <img src="images/Wappen.png" alt="Vereinswappen" class="wappen">
+        <h1>Dart-Abteilung Spitzbuwe Weierbach</h1>
+        <h2>VfL Weierbach 1892 e.V.</h2>
     </header>
-    
-    <nav onclick="toggleMenu()">☰ Menü</nav>
-    <div class="menu" id="menu">
-        <a href="#bio">Über uns</a>
-        <a href="#gallery">Bildergalerie</a>
-        <a href="#players">Vereinsspieler</a>
-        <a href="#sponsors">Sponsoren</a>
-        <a href="#social">Social Media</a>
-    </div>
-    
-    <div class="content" id="bio">
-        <h2>Über uns</h2>
-        <p>Trainingstag: Donnerstags ab 18 Uhr im Vereinsheim</p>
-        <img src="Vfl.png" alt="VfL Weierbach Logo" width="150">
-        <p><a href="https://www.vfl-weierbach.de/">Hauptverein: VfL Weierbach 1892 e.V.</a></p>
-    </div>
-    
-    <div class="content" id="gallery">
-        <h2>Bildergalerie</h2>
-        <img src="Vereinsheim-Weierbach.jpg" alt="Vereinsheim">
-        <img src="Dart-Anlagen.jpg" alt="Dart Anlagen">
-    </div>
-    
-    <div class="content" id="players">
-        <h2>Vereinsspieler</h2>
-        <p>1. Max "The Power" Mustermann</p>
-        <p>2. Tom "Bullseye" Becker</p>
-        <p>3. ... (weitere Namen nachtragen)</p>
-    </div>
-    
-    <div class="content" id="sponsors">
-        <h2>Sponsoren</h2>
-        <div class="sponsor">
-            <a href="#"><img src="Glasfinish.png" alt="Glasfinish"></a>
-            <a href="#"><img src="Medimobil.png" alt="Medimobil"></a>
-            <a href="#"><img src="EMS.png" alt="EMS"></a>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Startseite</a></li>
+            <li><a href="#" onclick="showSection('training')">Training</a></li>
+            <li class="menu-item">
+                <a href="#">Verein ▼</a>
+                <ul class="dropdown">
+                    <li><a href="#" onclick="showSection('spieler')">Aktuelle Spieler</a></li>
+                    <li><a href="#" onclick="showSection('spieltag')">Spieltag</a></li>
+                    <li><a href="#" onclick="showSection('ergebnisse')">Ergebnisse</a></li>
+                    <li><a href="#" onclick="showSection('tabelle')">Tabelle</a></li>
+                    <li><a href="#" onclick="showSection('bio')">Über uns</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="showSection('sponsoren')">Sponsoren</a></li>
+            <li><a href="#" onclick="showSection('galerie')">Bildergalerie</a></li>
+            <li><a href="#" onclick="showSection('kontakt')">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hauptinhalt -->
+    <main>
+        <section id="home">
+            <h2>Willkommen bei den Spitzbuwe Weierbach</h2>
+            <p>Wir sind die Dart-Abteilung des VfL Weierbach, gegründet am 01. März 2025.  
+               Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt.  
+               Ab September nehmen wir an der EHM-Liga teil.</p>
+        </section>
+
+        <section id="training" class="hidden">
+            <h2>Training</h2>
+            <p>Wir trainieren jeden Donnerstag ab 18 Uhr im Vereinsheim des VfL Weierbach.</p>
+        </section>
+
+        <section id="spieler" class="hidden">
+            <h2>Unsere Spieler</h2>
+            <div class="spieler-container">
+                <div class="spieler">
+                    <p>Matthias „The Underdog“ Müller</p>
+                </div>
+                <div class="spieler">
+                    <p>Marvin „The Wildfly“ Wild</p>
+                </div>
+                <div class="spieler">
+                    <p>Julian „Madhouse“ Müller</p>
+                </div>
+                <div class="spieler">
+                    <p>12 weitere Spieler folgen...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsoren" class="hidden">
+            <h2>Unsere Sponsoren</h2>
+            <div class="sponsoren-container">
+                <img src="images/Glasfinish.png" alt="Glasfinish">
+                <img src="images/Medimobil.png" alt="Medimobil">
+                <img src="images/EMS.png" alt="EMS Elektro Mix Shop">
+            </div>
+        </section>
+
+        <section id="galerie" class="hidden">
+            <h2>Bildergalerie</h2>
+            <img src="images/Vereinsheim-Weierbach.jpg" alt="Vereinsheim">
+            <img src="images/Dart-Anlagen.jpg" alt="Dart Anlagen">
+        </section>
+
+        <section id="bio" class="hidden">
+            <h2>Über uns</h2>
+            <p>Die Dart-Abteilung wurde am 01. März 2025 gegründet und ist Teil des VfL Weierbach.</p>
+        </section>
+
+        <section id="kontakt" class="hidden">
+            <h2>Kontakt</h2>
+            <p>Email: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Dart-Abteilung VfL Weierbach | Alle Rechte vorbehalten</p>
+        <div class="social-media">
+            <a href="#"><img src="images/instagramm.png" alt="Instagram"></a>
+            <a href="#"><img src="images/Facebook.png" alt="Facebook"></a>
         </div>
-    </div>
-    
-    <footer id="social">
-        <h2>Social Media</h2>
-        <a href="#"><img src="Facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="instagramm.png" alt="Instagram"></a>
     </footer>
+
 </body>
 </html>
