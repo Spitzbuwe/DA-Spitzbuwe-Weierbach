@@ -1,71 +1,35 @@
-/* Allgemeines Layout */
-body {
-    background-color: #5CC14A;
-    color: #FFFFFF;
-    font-family: Arial, sans-serif;
-    margin: 0;
+/* Spieler */
+.spieler-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.spieler {
     text-align: center;
 }
 
-/* Header */
-header {
-    background-color: #63C351;
+.spieler img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Tabellen */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid white;
     padding: 10px;
     text-align: center;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.wappen {
-    width: 80px;
-    height: auto;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+th {
     background-color: #62C250;
-}
-
-nav ul li {
-    position: relative;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-}
-
-/* Galerie */
-.gallery img {
-    width: 150px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.2);
-}
-
-/* Social Media */
-.social-links img {
-    width: 40px;
-    margin: 5px;
-}
-
-/* Versteckte Sektionen */
-.hidden {
-    display: none;
 }
