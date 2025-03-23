@@ -1,16 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Event Listener für Menü-Klicks
-    document.querySelectorAll("nav ul li a").forEach(item => {
-        item.addEventListener("click", function (event) {
-            event.preventDefault();
-            let sectionId = this.getAttribute("onclick")?.match(/'([^']+)'/);
-            if (sectionId) {
-                showSection(sectionId[1]);
-            }
-        });
-    });
+    // Globale Funktion für die Navigation definieren
+    window.showSection = function (id) {
+        let section = document.getElementById(id);
+        if (!section) {
+            console.warn(`Warnung: Die Sektion mit der ID "${id}" wurde nicht gefunden.`);
+            return;
+        }
 
-    // Event Listener für Dropdown-Menü (öffnet erst beim Klick)
+        // Alle Sektionen ausblenden
+        document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
+        
+        // Angeforderte Sektion anzeigen
+        section.classList.remove("hidden");
+    };
+
+    // Dropdown-Menü klickbar machen
     document.querySelectorAll(".menu-item > a").forEach(menu => {
         menu.addEventListener("click", function (event) {
             event.preventDefault();
@@ -21,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Klick außerhalb des Dropdown-Menüs schließt es
+    // Klick außerhalb des Dropdowns schließt es
     document.addEventListener("click", function (event) {
         if (!event.target.closest(".menu-item")) {
             document.querySelectorAll(".dropdown").forEach(dropdown => {
@@ -30,18 +34,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-// Funktion zum Anzeigen der gewünschten Sektion
-function showSection(id) {
-    let section = document.getElementById(id);
-    if (!section) {
-        console.warn(`Warnung: Die Sektion mit der ID "${id}" wurde nicht gefunden.`);
-        return;
-    }
-
-    // Alle anderen Sektionen ausblenden
-    document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
-    
-    // Gewählte Sektion anzeigen
-    section.classList.remove("hidden");
-}
