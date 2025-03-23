@@ -58,6 +58,11 @@ body {
     display: block;
 }
 
+
+.dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
 /* Versteckte Sektionen */
 .hidden {
     display: none;
