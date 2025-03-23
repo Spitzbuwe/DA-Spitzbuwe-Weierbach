@@ -6,59 +6,6 @@
     <title>Dart-Abteilung Spitzbuwe Weierbach</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .menu-bio-container {
-            display: flex;
-            align-items: flex-start;
-            width: 80%;
-            margin-top: 20px;
-        }
-        .nav-container {
-            width: 25%;
-            text-align: left;
-        }
-        .bio-container {
-            width: 75%;
-            text-align: left;
-        }
-        .dropdown {
-            position: relative;
-            display: block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            min-width: 200px;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: black;
-        }
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
 </head>
 <body>
     <div class="header-container">
@@ -97,10 +44,104 @@
         </div>
     </div>
 
+    <!-- Vereinsspieler -->
+    <section id="spieler" class="hidden">
+        <h2>Vereinsspieler</h2>
+        <ul>
+            <li>Matthias "The Underdog" Müller</li>
+            <li>Marvin "The Wildfly" Wild</li>
+            <li>Julian "Madhouse" Müller</li>
+            <li>Georg "The Hammer" Hamelmann</li>
+            <li>Sven "The Red Baron" Lempke</li>
+            <li>Stefan "The Flash" Schlosser</li>
+            <li>Björn Rupprich</li>
+            <li>Niko "The Frozen Sniper" Müller</li>
+            <li>Thomas "TK Finish" Keibel</li>
+            <li>Tobias</li>
+            <li>Christian "Dart Vader" Wagner</li>
+        </ul>
+    </section>
+
+    <!-- Sponsoren -->
+    <section id="sponsoren-list" class="hidden">
+        <h2>Unsere Sponsoren</h2>
+        <div class="sponsor">
+            <a href="https://www.glasfinish-folientechnik.de/" target="_blank">
+                <img src="Glasfinish.png" alt="Glasfinish">
+                <p>Glasfinish</p>
+            </a>
+        </div>
+        <div class="sponsor">
+            <a href="https://medimobil-gmbh.de/bernkastel-kues/" target="_blank">
+                <img src="Medimobil.png" alt="Medimobil">
+                <p>Medimobil</p>
+            </a>
+        </div>
+        <div class="sponsor">
+            <a href="https://www.ebay.de/str/elektromixshop2015/" target="_blank">
+                <img src="EMS.png" alt="EMS Elektro Mix Shop">
+                <p>EMS Elektro Mix Shop</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Bildergalerie -->
+    <section id="galerie" class="hidden">
+        <h2>Bildergalerie</h2>
+        <div class="gallery">
+            <img src="Vereinsheim-Weierbach.jpg" alt="Vereinsheim Weierbach">
+            <img src="Dart-Anlagen.jpg" alt="Dart Anlage">
+        </div>
+    </section>
+
+    <!-- Spieltag mit Mannschaftseintragung -->
+    <section id="spieltag" class="hidden">
+        <h2>Spieltag</h2>
+        <form>
+            <label for="team1">Mannschaft 1:</label>
+            <input type="text" id="team1" name="team1" required>
+            
+            <label for="team2">Mannschaft 2:</label>
+            <input type="text" id="team2" name="team2" required>
+
+            <label for="score">Ergebnis:</label>
+            <input type="text" id="score" name="score" required>
+
+            <button type="submit">Speichern</button>
+        </form>
+    </section>
+
+    <!-- Ligatabelle -->
     <section id="ligatabelle" class="hidden">
         <h2>Ligatabelle</h2>
         <p>Hier wird die automatische Tabelle basierend auf den Ergebnissen erstellt.</p>
     </section>
+
+    <!-- Sonstiges -->
+    <section id="sonstiges" class="hidden">
+        <h2>Sonstiges</h2>
+        <p>Hier können zusätzliche Inhalte hinzugefügt werden.</p>
+    </section>
+
+  <div class="dropdown">
+    <button class="dropbtn">☰ Menü</button>
+    <div class="dropdown-content">
+        <a href="#" onclick="showOnly('spieler')">Vereinsspieler</a>
+        <a href="#" onclick="showOnly('galerie')">Bildergalerie</a>
+        <a href="#" onclick="showOnly('sponsoren-list')">Sponsoren</a>
+        <div class="dropdown">
+            <a href="#">Veranstaltungen ▼</a>
+            <div class="dropdown-content">
+                <a href="#" onclick="showOnly('spieltag')">Spieltag</a>
+                <a href="#" onclick="showOnly('ligatabelle')">Ligatabelle</a>
+            </div>
+     
+        </div>
+        <a href="#" onclick="showOnly('sonstiges')">Sonstiges</a>
+        <a href="https://www.instagram.com/spitzbuwe/" target="_blank">📷 Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61574211682391" target="_blank">📘 Facebook</a>
+    </div>
+</div>
 
     <footer>
         <p>Kontakt: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
