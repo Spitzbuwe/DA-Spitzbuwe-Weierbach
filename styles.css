@@ -1,51 +1,60 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #90EE90;
-    color: black;
-    text-align: center;
     margin: 0;
+    padding: 0;
+    background-color: #222;
+    color: white;
 }
 
 header {
-    background-color: #006400;
-    color: white;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    background-color: #228B22;
+    display: flex;
+    gap: 15px;
 }
 
 nav ul li {
-    display: inline-block;
-    padding: 10px;
+    display: inline;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-}
-
-.hidden {
-    display: none;
-}
-
-.spieler-container, .sponsoren-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-footer {
-    background-color: #006400;
-    color: white;
     padding: 10px;
-    margin-top: 20px;
 }
 
-.social-media img {
-    width: 30px;
-    margin: 0 10px;
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('Vereinsheim-Weierbach.jpg') no-repeat center center/cover;
+}
+
+.hero h2 {
+    font-size: 3em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
 }
