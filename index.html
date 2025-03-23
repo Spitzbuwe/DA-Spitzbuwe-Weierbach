@@ -62,11 +62,11 @@
 
     <nav>
         <ul id="menu">
-            <li><a href="#" onclick="toggleSection('spieler')">Vereinsspieler</a></li>
-            <li><a href="#" onclick="toggleSection('galerie')">Bildergalerie</a></li>
+            <li><a href="#" onclick="showOnly('spieler')">Vereinsspieler</a></li>
+            <li><a href="#" onclick="showOnly('galerie')">Bildergalerie</a></li>
             <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
             <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="#" onclick="toggleSponsoren()">Sponsoren</a></li>
+            <li><a href="#" onclick="showOnly('sponsoren-list')">Sponsoren</a></li>
         </ul>
     </nav>
 
@@ -119,16 +119,18 @@
     </footer>
 
     <script>
-        function toggleSection(sectionId) {
-            let section = document.getElementById(sectionId);
-            if (section) {
-                section.classList.toggle("hidden");
-            }
-        }
-
-        function toggleSponsoren() {
-            let sponsorenList = document.getElementById("sponsoren-list");
-            sponsorenList.classList.toggle("hidden");
+        function showOnly(sectionId) {
+            let sections = ["spieler", "galerie", "sponsoren-list"];
+            sections.forEach(id => {
+                let element = document.getElementById(id);
+                if (element) {
+                    if (id === sectionId) {
+                        element.classList.remove("hidden");
+                    } else {
+                        element.classList.add("hidden");
+                    }
+                }
+            });
         }
     </script>
 </body>
