@@ -1,45 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("JavaScript geladen.");
-
-    // Funktion zum Anzeigen bestimmter Sektionen
-    window.showOnly = function (sectionId) {
-        let sections = document.querySelectorAll("section");
-        sections.forEach(section => {
-            section.style.display = (section.id === sectionId) ? "block" : "none";
-        });
-    };
-
-    // Galerie Bilder vergrößern
-    document.querySelectorAll(".gallery img").forEach(img => {
-        img.addEventListener("click", function () {
-            let overlay = document.createElement("div");
-            overlay.style.position = "fixed";
-            overlay.style.top = "0";
-            overlay.style.left = "0";
-            overlay.style.width = "100%";
-            overlay.style.height = "100%";
-            overlay.style.backgroundColor = "rgba(0,0,0,0.8)";
-            overlay.style.display = "flex";
-            overlay.style.justifyContent = "center";
-            overlay.style.alignItems = "center";
-            overlay.style.zIndex = "1000";
-
-            let imgClone = document.createElement("img");
-            imgClone.src = this.src;
-            imgClone.style.maxWidth = "80%";
-            imgClone.style.maxHeight = "80%";
-            imgClone.style.border = "5px solid white";
-            imgClone.style.borderRadius = "10px";
-
-            overlay.appendChild(imgClone);
-            overlay.addEventListener("click", function () {
-                document.body.removeChild(overlay);
-            });
-
-            document.body.appendChild(overlay);
-        });
+    const menu = document.querySelector("nav");
+    const menuList = document.querySelector("nav ul");
+    
+    menu.addEventListener("click", function () {
+        menuList.style.display = menuList.style.display === "block" ? "none" : "block";
     });
 
-    // Ligatabelle automatisch sortieren
-    function sortTable() {
-        let table = document.getElementById("ligatabelle
+    document.querySelectorAll("nav ul li a").forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
