@@ -44,6 +44,20 @@ body {
     display: block;
 }
 
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
 /* Versteckte Sektionen */
 .hidden {
     display: none;
