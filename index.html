@@ -6,80 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dart-Abteilung Spitzbuwe Weierbach</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelectorAll(".menu-item").forEach(item => {
-                item.addEventListener("click", function () {
-                    let dropdown = this.querySelector(".dropdown");
-                    if (dropdown) {
-                        dropdown.classList.toggle("show");
-                    }
-                });
-            });
-        });
-    </script>
-    <style>
-        body {
-            background-color: #5CC14A;
-            color: #CCCBCD;
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-        header {
-            background-color: #63C351;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #62C250;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-        nav ul li {
-            position: relative;
-        }
-        nav ul li a {
-            display: block;
-            color: #000;
-            text-decoration: none;
-            padding: 15px 20px;
-            transition: background 0.3s ease;
-            cursor: pointer;
-        }
-        nav ul li a:hover {
-            background-color: #61C24D;
-        }
-        /* Dropdown versteckt */
-        nav ul li .dropdown {
-            display: none;
-            position: absolute;
-            background-color: #62C250;
-            list-style: none;
-            padding: 0;
-            min-width: 180px;
-            top: 100%;
-            left: 0;
-            z-index: 1000;
-            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-        }
-        /* Dropdown wird angezeigt, wenn geklickt */
-        nav ul li .dropdown.show {
-            display: block;
-        }
-        nav ul li .dropdown li {
-            width: 100%;
-        }
-        .content {
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -97,13 +24,13 @@
                     <li><a href="#bio">Über uns</a></li>
                 </ul>
             </li>
-            <li><a href="#sponsoren-list">Sponsoren</a></li>
+            <li><a href="#sponsoren">Sponsoren</a></li>
             <li><a href="#galerie">Bildergalerie</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
 
-    <div class="content">
+    <main>
         <section id="home">
             <h1>Willkommen bei der Dart-Abteilung des VfL Weierbach</h1>
             <p>Hier erfährst du alles über unser Team, unser Training und die Veranstaltungen!</p>
@@ -140,32 +67,32 @@
         </section>
 
         <section id="sponsoren">
-    <h2>Unsere Sponsoren</h2>
-    <p>Dank der großzügigen Unterstützung unserer Sponsoren konnten wir unsere Dart-Anlagen aufbauen!</p>
+            <h2>Unsere Sponsoren</h2>
+            <p>Dank der großzügigen Unterstützung unserer Sponsoren konnten wir unsere Dart-Anlagen modernisieren!</p>
 
-    <div class="sponsoren-container">
-        <div class="sponsor">
-            <a href="https://www.glasfinish.de" target="_blank">
-                <img src="images/glasfinish-logo.png" alt="Glasfinish Logo">
-            </a>
-            <p>Glasfinish</p>
-        </div>
+            <div class="sponsoren-container">
+                <div class="sponsor">
+                    <a href="https://www.glasfinish.de" target="_blank">
+                        <img src="Glasfinish.png" alt="Glasfinish Logo">
+                    </a>
+                    <p>Glasfinish</p>
+                </div>
 
-        <div class="sponsor">
-            <a href="https://www.medimobil.de" target="_blank">
-                <img src="images/medimobil-logo.png" alt="Medimobil Logo">
-            </a>
-            <p>Medimobil</p>
-        </div>
+                <div class="sponsor">
+                    <a href="https://www.medimobil.de" target="_blank">
+                        <img src="Medimobil.png" alt="Medimobil Logo">
+                    </a>
+                    <p>Medimobil</p>
+                </div>
 
-        <div class="sponsor">
-            <a href="https://www.ems-elektro-mix-shop.de" target="_blank">
-                <img src="images/ems-logo.png" alt="EMS Elektro Mix Shop Logo">
-            </a>
-            <p>EMS Elektro Mix Shop</p>
-        </div>
-    </div>
-</section>
+                <div class="sponsor">
+                    <a href="https://www.ebay.de/str/elektromixshop2015" target="_blank">
+                        <img src="EMS.png" alt="EMS Elektro Mix Shop Logo">
+                    </a>
+                    <p>EMS Elektro Mix Shop</p>
+                </div>
+            </div>
+        </section>
 
         <section id="bio">
             <h2>Über uns</h2>
@@ -181,7 +108,7 @@
             <p>Folge uns auf <a href="https://www.instagram.com/vflweierbach">Instagram</a> und 
             <a href="https://www.facebook.com/vflweierbach">Facebook</a></p>
         </section>
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2025 Dart-Abteilung VfL Weierbach | Alle Rechte vorbehalten</p>
