@@ -1,3 +1,4 @@
+/* Allgemeines Layout */
 body {
     background-color: #5CC14A;
     color: #FFFFFF;
@@ -6,6 +7,7 @@ body {
     text-align: center;
 }
 
+/* Header */
 .header-container {
     display: flex;
     align-items: center;
@@ -15,9 +17,59 @@ body {
     background-color: #63C351;
 }
 
+/* Wappen verkleinern */
 .wappen-klein {
     width: 50px;
     height: auto;
+}
+
+/* Navigation */
+.diywebNav {
+    background-color: #62C250;
+    padding: 10px 0;
+}
+
+.diywebNav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
+
+.diywebNav ul li {
+    position: relative;
+}
+
+.diywebNav ul li a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background 0.3s ease;
+}
+
+.diywebNav ul li a:hover {
+    background-color: #61C24D;
+}
+
+/* Dropdown-Menü */
+.menu-item .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #62C250;
+    list-style: none;
+    padding: 0;
+    min-width: 180px;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.menu-item .dropdown.show {
+    display: block;
 }
 
 /* Bildergalerie */
@@ -49,4 +101,9 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
+}
+
+/* Versteckte Sektionen */
+.hidden {
+    display: none;
 }
