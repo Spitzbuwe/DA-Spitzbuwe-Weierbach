@@ -10,6 +10,14 @@
     <style>
         body {
             background-color: green;
+            color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background: darkgreen;
+            color: white;
         }
         .dropdown {
             position: relative;
@@ -35,22 +43,38 @@
         .dropdown-content a:hover {
             background-color: #ddd;
         }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: darkgreen;
+            color: white;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
+
     <!-- Header und Navigation -->
     <header>
-        <div class="logo">
-            <img src="wappen.png" alt="VfL Weierbach Logo">
-        </div>
+        <h1>Dart-Abteilung Spitzbuwe Weierbach</h1>
         <nav>
             <div class="dropdown">
                 <button class="dropbtn">Menü</button>
                 <div class="dropdown-content">
-                    <a href="#home">Startseite</a>
-                    <a href="#training">Training</a>
-                    <a href="#spieler">Vereinsspieler</a>
-                    <a href="#sponsoren">Sponsoren</a>
+                    <a href="#training">Trainingstag</a>
+                    <a href="#spieler">Unsere Spieler</a>
+                    <a href="#sponsoren">Unsere Sponsoren</a>
                     <a href="#galerie">Bildergalerie</a>
                     <a href="#bio">Über uns</a>
                     <a href="#kontakt">Kontakt</a>
@@ -59,10 +83,10 @@
         </nav>
     </header>
 
-    <!-- Hauptbereich -->
+    <!-- Hauptinhalt -->
     <main>
         <section id="home">
-            <h1>Willkommen bei der Dart-Abteilung des VfL Weierbach</h1>
+            <h2>Willkommen bei der Dart-Abteilung des VfL Weierbach</h2>
             <p>Hier erfährst du alles über unser Team, unser Training und die Veranstaltungen!</p>
         </section>
 
@@ -111,13 +135,10 @@
         <section id="kontakt">
             <h2>Kontakt</h2>
             <p>Email: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
+            <p>Folge uns auf <a href="https://www.instagram.com/vflweierbach">Instagram</a> und <a href="https://www.facebook.com/vflweierbach">Facebook</a></p>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Dart-Abteilung VfL Weierbach | Alle Rechte vorbehalten</p>
-        <p>Folge uns auf <a href="https://www.instagram.com/vflweierbach">Instagram</a> und <a href="https://www.facebook.com/vflweierbach">Facebook</a></p>
-    </footer>
-</body>
-</html>
+        <p>&copy; 2025 Dart-Abteilung VfL We
