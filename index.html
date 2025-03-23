@@ -7,49 +7,105 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Header mit Logo & Navigation -->
     <header>
-        <img src="Wappen.png" alt="Vereinswappen" class="logo">
-        <h1>DC Spitzbuwe Weierbach</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Startseite</a></li>
-                <li><a href="#spieler">Spieler</a></li>
-                <li><a href="#sponsoren">Sponsoren</a></li>
-                <li><a href="#spieltag">Spieltag</a></li>
-                <li><a href="#galerie">Galerie</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <img src="Wappen.png" alt="Vereinswappen" class="logo">
+            <h1>DC Spitzbuwe Weierbach</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Startseite</a></li>
+                    <li><a href="#spieler">Spieler</a></li>
+                    <li><a href="#sponsoren">Sponsoren</a></li>
+                    <li><a href="#spieltag">Spieltag</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <!-- Startseite -->
     <section id="home">
-        <h2>Willkommen bei den DC Spitzbuwe Weierbach</h2>
-        <p>Hier findest du alle Informationen zu unserem Verein, den Spielern und aktuellen Spieltagen.</p>
-    </section>
-
-    <section id="spieler">
-        <h2>Unsere Spieler</h2>
-        <ul>
-            <li>Max "The Arrow" Mustermann</li>
-            <li>Paul "Bullseye" Schmidt</li>
-        </ul>
-    </section>
-
-    <section id="sponsoren">
-        <h2>Unsere Sponsoren</h2>
-        <div class="sponsor">
-            <a href="https://example.com" target="_blank">
-                <img src="EMS.png" alt="EMS Sponsor">
-            </a>
+        <div class="container">
+            <h2>Willkommen bei den DC Spitzbuwe Weierbach</h2>
+            <p>Hier findest du alle Informationen zu unserem Verein, den Spielern und aktuellen Spieltagen.</p>
         </div>
     </section>
 
+    <!-- Spieler-Liste -->
+    <section id="spieler">
+        <div class="container">
+            <h2>Unsere Spieler</h2>
+            <ul>
+                <li>Max "The Shooter" Mustermann</li>
+                <li>Tom "Bullseye" Becker</li>
+                <li>Lukas "Eagle Eye" Schmidt</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sponsoren -->
+    <section id="sponsoren">
+        <div class="container">
+            <h2>Unsere Sponsoren</h2>
+            <div class="sponsor-list">
+                <a href="https://www.ems-website.de"><img src="EMS.png" alt="EMS"></a>
+                <a href="https://www.glasfinish.de"><img src="Glasfinish.png" alt="Glasfinish"></a>
+                <a href="https://www.medimobil.de"><img src="Medimobil.png" alt="Medimobil"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spieltage -->
+    <section id="spieltag">
+        <div class="container">
+            <h2>Nächste Spieltage</h2>
+            <table>
+                <tr>
+                    <th>Heim</th>
+                    <th>Gast</th>
+                    <th>Datum</th>
+                    <th>Uhrzeit</th>
+                </tr>
+                <tr>
+                    <td>DC Spitzbuwe</td>
+                    <td>VfL</td>
+                    <td>12.04.2025</td>
+                    <td>19:30</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Galerie -->
+    <section id="galerie">
+        <div class="container">
+            <h2>Unsere Galerie</h2>
+            <img src="Vereinsheim-Weierbach.jpg" alt="Vereinsheim">
+            <img src="Dart-Anlagen.jpg" alt="Dart-Anlagen">
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <p>E-Mail: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>Kontakt: dcspitzbuweweierbach@gmail.com</p>
-        <div class="social-media">
-            <a href="#"><img src="Facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="instagramm.png" alt="Instagram"></a>
+        <div class="container">
+            <p>&copy; 2025 DC Spitzbuwe Weierbach</p>
+            <div class="social-media">
+                <a href="#"><img src="Facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="instagramm.png" alt="Instagram"></a>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>
