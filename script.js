@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    calculateTable();
 });
 
 function showSection(id) {
@@ -20,15 +22,6 @@ function showSection(id) {
     section.classList.remove("hidden");
 }
 
-function enlargeImage(img) {
-    img.style.transform = img.style.transform === "scale(1.5)" ? "scale(1)" : "scale(1.5)";
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    calculateTable();
-});
-
 function calculateTable() {
-    // Berechnung der Tabelle basierend auf den Ergebnissen
     console.log("Tabelle aktualisiert");
 }
