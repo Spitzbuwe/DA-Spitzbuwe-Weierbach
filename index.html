@@ -12,6 +12,7 @@
             background-color: green;
             color: white;
             font-family: Arial, sans-serif;
+            text-align: center;
         }
         .dropdown {
             position: relative;
@@ -37,39 +38,13 @@
         .dropdown-content a:hover {
             background-color: #ddd;
         }
-    </style>
-</head>
-<body>
-    <!-- Header und Navigation -->
-    <header>
-        <div class="logo">
-            <img src="Wappen.png" alt="VfL Weierbach Logo" width="150">
-        </div>
-        <nav>
-            <div class="dropdown">
-                <button class="dropbtn">Menü</button>
-                <div class="dropdown-content">
-                    <a href="#home">Startseite</a>
-                    <a href="#training">Training</a>
-                    <a href="#spieler">Vereinsspieler</a>
-                    <a href="#sponsoren">Sponsoren</a>
-                    <a href="#galerie">Bildergalerie</a>
-                    <a href="#bio">Über uns</a>
-                    <a href="#kontakt">Kontakt</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hauptbereich -->
-    <main>
-        <section id="home">
-            <h1>Willkommen bei der Dart-Abteilung des VfL Weierbach</h1>
-            <p>Hier erfährst du alles über unser Team, unser Training und die Veranstaltungen!</p>
-        </section>
-
-        <section id="training">
-            <h2>Trainingstag</h2>
-            <p>Jeden Donnerstag ab 18 Uhr im Vereins
-
-                
+        .hidden {
+            display: none;
+        }
+        .gallery img {
+            width: 150px;
+            height: auto;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .sponsor img {
