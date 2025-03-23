@@ -1,16 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript wurde geladen.");
 
-    // Funktion zum Anzeigen bestimmter Sektionen
     function showOnly(sectionId) {
-        let sections = ["spieler", "galerie", "sponsoren-list", "spieltag", "ligatabelle", "sonstiges", "aktuelles", "adresse", "kontakt"];
-        sections.forEach(id => {
-            let element = document.getElementById(id);
-            if (element) {
-                element.style.display = (id === sectionId) ? "block" : "none";
-            }
-        });
-    }
+    let sections = document.querySelectorAll("section");
+    sections.forEach(section => {
+        section.style.display = (section.id === sectionId) ? "block" : "none";
+    });
+}
+
     
     window.showOnly = showOnly; // Damit showOnly global verfügbar ist
 
@@ -25,3 +22,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
