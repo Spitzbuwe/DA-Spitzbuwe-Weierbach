@@ -1,36 +1,7 @@
-/* Allgemeines Layout */
-body {
-    background-color: #5CC14A;
-    color: #FFFFFF;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    text-align: center;
-}
-
-/* Header */
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px;
-    background-color: #63C351;
-}
-
-.wappen {
-    width: 80px;
-    height: auto;
-}
-
-.wappen-klein {
-    width: 50px;
-    height: auto;
-    vertical-align: middle;
-}
-
 /* Navigation */
 nav {
     background-color: #62C250;
+    padding: 10px 0;
 }
 
 nav ul {
@@ -39,6 +10,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    gap: 30px; /* Abstand zwischen Menüeinträgen vergrößert */
 }
 
 nav ul li {
@@ -49,7 +21,7 @@ nav ul li a {
     display: block;
     color: #FFFFFF;
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 15px 25px;
     transition: background 0.3s ease;
     cursor: pointer;
 }
@@ -68,63 +40,14 @@ nav ul li a:hover {
     position: absolute;
     background-color: #62C250;
     list-style: none;
-    padding: 0;
-    min-width: 180px;
+    padding: 10px;
+    min-width: 200px;
     top: 100%;
     left: 0;
-    z-index: 1000;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
 }
 
 .menu-item .dropdown.show {
     display: block;
-}
-
-.menu-item .dropdown li {
-    width: 100%;
-}
-
-.menu-item .dropdown {
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-/* Spieler */
-.spieler-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.spieler {
-    text-align: center;
-}
-
-.spieler img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Tabellen */
-table {
-    width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid white;
-    padding: 10px;
-    text-align: center;
-}
-
-th {
-    background-color: #62C250;
-}
-
-/* Versteckte Sektionen */
-.hidden {
-    display: none;
 }
