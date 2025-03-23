@@ -1,12 +1,10 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const dropdown = document.querySelector(".dropdown");
-    const dropdownContent = document.querySelector(".dropdown-content");
-
-    dropdown.addEventListener("mouseover", function() {
-        dropdownContent.style.display = "block";
-    });
-
-    dropdown.addEventListener("mouseout", function() {
-        dropdownContent.style.display = "none";
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".menu-item").forEach(item => {
+        item.addEventListener("click", function () {
+            let dropdown = this.querySelector(".dropdown");
+            if (dropdown) {
+                dropdown.classList.toggle("show");
+            }
+        });
     });
 });
