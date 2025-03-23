@@ -1,47 +1,84 @@
+/* Allgemeines Layout */
 body {
     background-color: #5CC14A;
     color: #FFFFFF;
     font-family: Arial, sans-serif;
     margin: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #63C351;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.wappen {
+    width: 80px;
+    height: auto;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #62C250;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: #FFFFFF;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
 }
 
-.sponsoren-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 20px;
+/* Dropdown-Menü */
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #62C250;
+    list-style: none;
+    padding: 0;
+    min-width: 180px;
+    top: 100%;
+    left: 0;
 }
 
-.sponsor img {
-    width: 150px;
-    height: 100px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+.menu-item:hover .dropdown {
+    display: block;
 }
 
-.sponsor img:hover {
-    transform: scale(1.1);
-}
-
-.sponsor p {
-    color: #FFFFFF;
-}
-
-/* Galerie Bilder */
+/* Galerie */
 .gallery img {
     width: 150px;
     height: auto;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
 .gallery img:hover {
     transform: scale(1.2);
+}
+
+/* Social Media */
+.social-links img {
+    width: 30px;
+    margin: 5px;
 }
 
 /* Versteckte Sektionen */
