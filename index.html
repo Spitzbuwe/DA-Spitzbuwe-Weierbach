@@ -6,7 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dart-Abteilung Spitzbuwe Weierbach</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".menu-item").forEach(item => {
+                item.addEventListener("click", function () {
+                    let dropdown = this.querySelector(".dropdown");
+                    if (dropdown) {
+                        dropdown.classList.toggle("show");
+                    }
+                });
+            });
+        });
+    </script>
     <style>
         body {
             background-color: #5CC14A;
@@ -39,12 +50,13 @@
             text-decoration: none;
             padding: 15px 20px;
             transition: background 0.3s ease;
+            cursor: pointer;
         }
         nav ul li a:hover {
             background-color: #61C24D;
         }
-        /* Dropdown Menü */
-        nav ul li ul {
+        /* Dropdown versteckt */
+        nav ul li .dropdown {
             display: none;
             position: absolute;
             background-color: #62C250;
@@ -56,10 +68,11 @@
             z-index: 1000;
             box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
         }
-        nav ul li:hover ul {
+        /* Dropdown wird angezeigt, wenn geklickt */
+        nav ul li .dropdown.show {
             display: block;
         }
-        nav ul li ul li {
+        nav ul li .dropdown li {
             width: 100%;
         }
         .content {
@@ -77,9 +90,9 @@
         <ul>
             <li><a href="#home">Startseite</a></li>
             <li><a href="#training">Training</a></li>
-            <li>
-                <a href="#">Verein</a>
-                <ul>
+            <li class="menu-item">
+                <a>Verein ▼</a>
+                <ul class="dropdown">
                     <li><a href="#spieler">Vereinsspieler</a></li>
                     <li><a href="#bio">Über uns</a></li>
                 </ul>
