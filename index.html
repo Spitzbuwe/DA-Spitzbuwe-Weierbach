@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dart-Abteilung Spitzbuwe Weierbach</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -35,6 +34,7 @@
             </li>
             <li><a href="#" onclick="window.showSection('sponsoren')">Sponsoren</a></li>
             <li><a href="#" onclick="window.showSection('galerie')">Bildergalerie</a></li>
+            <li><a href="#" onclick="window.showSection('aktuelles')">Aktuelles</a></li>
             <li><a href="#" onclick="window.showSection('kontakt')">Kontakt</a></li>
         </ul>
     </nav>
@@ -53,66 +53,66 @@
 
         <!-- Aktuelle Spieler -->
         <section id="aktuelle-spieler" class="hidden">
-    <h2>Aktuelle Spieler</h2>
-    <div class="spieler-container">
-        <div class="spieler">
-            <img src="spieler/mueller.png" alt="Matthias Müller">
-            <p>Matthias Müller</p>
-        </div>
-        <div class="spieler">
-            <img src="spieler/wild.png" alt="Marvin Wild">
-            <p>Marvin Wild</p>
-        </div>
-        <div class="spieler">
-            <img src="spieler/madhouse.png" alt="Julian Müller">
-            <p>Julian Müller</p>
-        </div>
-        <div class="spieler">
-            <img src="spieler/hamelmann.png" alt="Georg Hamelmann">
-            <p>Georg Hamelmann</p>
-        </div>
-        <div class="spieler">
-            <img src="spieler/lempke.png" alt="Sven Lempke">
-            <p>Sven Lempke</p>
-        </div>
-        <div class="spieler">
-            <img src="spieler/schlosser.png" alt="Stefan Schlosser">
-            <p>Stefan Schlosser</p>
-        </div>
-        <div class="spieler">
-            <img src="spieler/rupprich.png" alt="Björn Rupprich">
-            <p>Björn Rupprich</p>
-        </div>
-        <div class="spieler">
-            <img src="spieler/mueller2.png" alt="Niko Müller">
-            <p>Niko Müller</p>
-        </div>
-        <div class="spieler">
-            <img src="spieler/keibel.png" alt="Thomas Keibel">
-            <p>Thomas Keibel</p>
-        </div>
-        <div class="spieler">
-            <img src="spieler/tobias.png" alt="Tobias">
-            <p>Tobias</p>
-        </div>
-        <div class="spieler">
-            <img src="spieler/wagner.png" alt="Christian Wagner">
-            <p>Christian Wagner</p>
-        </div>
-    </div>
-</section>
-
-        <section id="spieltag" class="hidden">
-            <h2>Spieltag</h2>
-            <table id="spieltag-tabelle">
-                <tr>
-                    <th>Heim</th>
-                    <th>Gast</th>
-                    <th>Datum</th>
-                    <th>Uhrzeit</th>
-                </tr>
-            </table>
+            <h2>Aktuelle Spieler</h2>
+            <ul>
+                <li>Matthias "The Underdog" Müller</li>
+                <li>Marvin "The Wildfly" Wild</li>
+                <li>Julian "Madhouse" Müller</li>
+                <li>Georg "The Hammer" Hamelmann</li>
+                <li>Sven "The Red Baron" Lempke</li>
+                <li>Stefan "The Flash" Schlosser</li>
+                <li>Björn Rupprich</li>
+                <li>Niko "The Frozen Sniper" Müller</li>
+                <li>Thomas "TK Finish" Keibel</li>
+                <li>Tobias</li>
+                <li>Christian "Dart Vader" Wagner</li>
+            </ul>
         </section>
+
+        <!-- Training -->
+        <section id="training" class="hidden">
+            <h2>Training</h2>
+            <p>Jeden Donnerstag ab 18 Uhr im Vereinsheim.</p>
+        </section>
+
+        <!-- Bildergalerie -->
+        <section id="galerie" class="hidden">
+            <h2>Bildergalerie</h2>
+            <div class="gallery" onclick="enlargeImage(event)">
+                <img src="images/Vereinsheim-Weierbach.jpg" alt="Vereinsheim Weierbach" style="width: 150px; height: auto;">
+                <img src="images/Dart-Anlagen.jpg" alt="Dart Anlage" style="width: 150px; height: auto;">
+            </div>
+        </section>
+
+        <!-- Aktuelles -->
+        <section id="aktuelles" class="hidden">
+            <h2>Aktuelles</h2>
+            <p>Hier werden Neuigkeiten und aktuelle Informationen veröffentlicht.</p>
+        </section>
+
+        <!-- Kontakt -->
+        <section id="kontakt" class="hidden">
+            <h2>Kontakt</h2>
+            <p>Email: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
+        </section>
+
+        <!-- Folge uns & Über uns -->
+        <div class="bio-container">
+            <section id="bio">
+                <h2>Folge uns</h2>
+                <p>
+                    <a href="https://www.instagram.com/spitzbuwe/" target="_blank">
+                        <img src="images/instagram.png" alt="Instagram" style="width: 30px; height: auto;"> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61574211682391" target="_blank">
+                        <img src="images/facebook.png" alt="Facebook" style="width: 30px; height: auto;"> Facebook
+                    </a>
+                </p>
+                <h2>Über uns</h2>
+                <p>Wir sind die Dart-Abteilung des VfL Weierbach, gegründet am 01. März 2025.  
+                   Ab September nehmen wir an der EHM-Liga teil. Derzeit besteht unser Team aus 11 aktiven Spielern. 🎯</p>
+            </section>
+        </div>
     </main>
 
     <footer>
