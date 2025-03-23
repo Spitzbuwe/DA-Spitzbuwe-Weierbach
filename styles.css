@@ -1,13 +1,27 @@
+/* Allgemeines Layout */
+body {
+    background-color: #5CC14A;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #62C250;
+}
+
 /* Spieler */
 .spieler-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-}
-
-.spieler {
-    text-align: center;
 }
 
 .spieler img {
