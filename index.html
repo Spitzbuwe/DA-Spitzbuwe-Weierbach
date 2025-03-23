@@ -14,34 +14,38 @@
             text-align: center;
         }
         .wappen {
-            height: 80px; /* Größe anpassen */
+            height: 80px;
             width: auto;
         }
         nav {
-            display: flex;
-            justify-content: flex-end;
+            background-color: black;
             padding: 10px;
+            display: flex;
+            justify-content: center;
         }
         #menu {
             display: flex;
-            gap: 10px;
+            gap: 20px;
             list-style: none;
-            background-color: black;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        #menu li {
-            display: inline;
         }
         #menu li a {
             color: white;
             text-decoration: none;
-            padding: 10px;
-            cursor: pointer;
-        }
-        #menu li a:hover {
+            padding: 10px 15px;
             background-color: gray;
             border-radius: 5px;
+        }
+        #menu li a:hover {
+            background-color: white;
+            color: black;
+        }
+        #sponsoren-list {
+            display: none;
+            background-color: lightgray;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-align: center;
         }
         .hidden {
             display: none;
@@ -59,37 +63,14 @@
     <nav>
         <ul id="menu">
             <li><a href="#" onclick="toggleSection('spieler')">Vereinsspieler</a></li>
-            <li><a href="#" onclick="toggleSection('sponsoren')">Sponsoren</a></li>
             <li><a href="#" onclick="toggleSection('galerie')">Bildergalerie</a></li>
             <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
             <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="#" onclick="toggleSponsoren()">Sponsoren</a></li>
         </ul>
     </nav>
 
-    <section id="bio">
-        <h2>Über uns</h2>
-        <p>Wir sind die Dart-Abteilung des VfL Weierbach, gegründet am 01. März 2025. Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt. Ab September nehmen wir an der EHM-Liga teil. Derzeit besteht unser Team aus 11 aktiven Spielern. 🎯</p>
-        <img src="Partnerverein.png" alt="Partnerverein Logo">
-    </section>
-
-    <section id="spieler" class="hidden">
-        <h2>Vereinsspieler</h2>
-        <ul>
-            <li>Matthias "The Underdog" Müller</li>
-            <li>Marvin "The Wildfly" Wild</li>
-            <li>Julian "Madhouse" Müller</li>
-            <li>Georg "The Hammer" Hamelmann</li>
-            <li>Sven "The Red Baron" Lempke</li>
-            <li>Stefan "The Flash" Schlosser</li>
-            <li>Björn Rupprich</li>
-            <li>Niko "The Frozen Sniper" Müller</li>
-            <li>Thomas "TK Finish" Keibel</li>
-            <li>Tobias</li>
-            <li>Christian "Dart Vader" Wagner</li>
-        </ul>
-    </section>
-
-    <section id="sponsoren" class="hidden">
+    <div id="sponsoren-list" class="hidden">
         <h2>Sponsoren</h2>
         <div class="sponsor">
             <a href="https://www.glasfinish-folientechnik.de/" target="_blank">
@@ -106,6 +87,23 @@
                 <img src="EMS.png" alt="EMS Elektro Mix Shop Logo">
             </a>
         </div>
+    </div>
+
+    <section id="spieler" class="hidden">
+        <h2>Vereinsspieler</h2>
+        <ul>
+            <li>Matthias "The Underdog" Müller</li>
+            <li>Marvin "The Wildfly" Wild</li>
+            <li>Julian "Madhouse" Müller</li>
+            <li>Georg "The Hammer" Hamelmann</li>
+            <li>Sven "The Red Baron" Lempke</li>
+            <li>Stefan "The Flash" Schlosser</li>
+            <li>Björn Rupprich</li>
+            <li>Niko "The Frozen Sniper" Müller</li>
+            <li>Thomas "TK Finish" Keibel</li>
+            <li>Tobias</li>
+            <li>Christian "Dart Vader" Wagner</li>
+        </ul>
     </section>
 
     <section id="galerie" class="hidden">
@@ -126,6 +124,11 @@
             if (section) {
                 section.classList.toggle("hidden");
             }
+        }
+
+        function toggleSponsoren() {
+            let sponsorenList = document.getElementById("sponsoren-list");
+            sponsorenList.classList.toggle("hidden");
         }
     </script>
 </body>
