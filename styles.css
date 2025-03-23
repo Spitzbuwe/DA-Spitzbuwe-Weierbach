@@ -2,59 +2,53 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #222;
-    color: white;
+    background-color: #f4f4f4;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #111;
-    padding: 15px 20px;
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
     width: 50px;
-    margin-right: 10px;
+    vertical-align: middle;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
-    gap: 15px;
+    padding: 0;
 }
 
 nav ul li {
     display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+}
+
+section {
+    padding: 20px;
+}
+
+.sponsor img {
+    width: 150px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
     padding: 10px;
 }
 
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: url('Vereinsheim-Weierbach.jpg') no-repeat center center/cover;
+.social-media img {
+    width: 30px;
+    margin: 0 5px;
 }
 
-.hero h2 {
-    font-size: 3em;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: red;
-    color: white;
-    text-decoration: none;
-    margin-top: 20px;
-}
