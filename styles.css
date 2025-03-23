@@ -1,50 +1,94 @@
+/* Allgemeine Stile */
 body {
-    background-color: #5CC14A;
-    color: #FFFFFF;
     font-family: Arial, sans-serif;
+    background-color: #ccffcc;
     margin: 0;
+    padding: 0;
     text-align: center;
 }
 
+/* Header-Stil */
 .header-container {
+    background-color: black;
+    color: white;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    padding: 10px;
-    background-color: #63C351;
+    gap: 20px;
 }
 
-.wappen-klein {
-    width: 50px;
+.wappen {
+    width: 100px;
     height: auto;
 }
 
-/* Dropdown-Menü */
-.menu-item .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #62C250;
-    list-style: none;
-    padding: 10px;
-    min-width: 180px;
-    top: 100%;
-    left: 0;
-    border-radius: 5px;
+/* Menü-Stil */
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #4CAF50;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
-.menu-item .dropdown.show {
+.nav-list li {
+    position: relative;
+}
+
+.nav-list li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.nav-list li:hover {
+    background-color: #45a049;
+}
+
+/* Dropdown-Menü */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Besucherzähler */
-#visitor-counter {
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    background: rgba(0, 0, 0, 0.7);
+/* Versteckte Abschnitte */
+.hidden {
+    display: none;
+}
+
+/* Galerie-Stil */
+.gallery img {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Sponsorenlogos */
+.sponsor img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: black;
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
 }
