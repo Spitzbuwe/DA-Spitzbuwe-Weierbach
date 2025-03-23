@@ -26,7 +26,7 @@
             <li class="menu-item">
                 <a href="#">Verein ▼</a>
                 <ul class="dropdown">
-                    <li><a href="#" onclick="showSection('spieler')">Vereinsspieler</a></li>
+                    <li><a href="#" onclick="showSection('spieler')">Aktuelle Spieler</a></li>
                     <li><a href="#" onclick="showSection('spieltag')">Spieltag</a></li>
                     <li><a href="#" onclick="showSection('ergebnisse')">Ergebnisse</a></li>
                     <li><a href="#" onclick="showSection('tabelle')">Tabelle</a></li>
@@ -49,22 +49,68 @@
             <p>Wir sind die Dart-Abteilung des VfL Weierbach, gegründet am 01. März 2025.  
                Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt.  
                Ab September nehmen wir an der EHM-Liga teil. Derzeit besteht unser Team aus 11 aktiven Spielern.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/spitzbuwe/" target="_blank">
-                    <img src="instagram.png" alt="Instagram">
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61574211682391" target="_blank">
-                    <img src="facebook.png" alt="Facebook">
-                </a>
+        </section>
+
+        <!-- Aktuelle Spieler -->
+        <section id="spieler" class="hidden">
+            <h2>Aktuelle Spieler</h2>
+            <div class="spieler-container">
+                <div class="spieler">
+                    <img src="spieler/mueller.png" alt="Matthias Müller">
+                    <p>Matthias "The Underdog" Müller</p>
+                </div>
+                <div class="spieler">
+                    <img src="spieler/wild.png" alt="Marvin Wild">
+                    <p>Marvin "The Wildfly" Wild</p>
+                </div>
+                <div class="spieler">
+                    <img src="spieler/madhouse.png" alt="Julian Müller">
+                    <p>Julian "Madhouse" Müller</p>
+                </div>
+                <!-- Weitere Spieler hier einfügen -->
             </div>
         </section>
 
-        <section id="galerie" class="hidden">
-            <h2>Bildergalerie</h2>
-            <div class="gallery">
-                <img src="Vereinsheim-Weierbach.jpg" alt="Vereinsheim Weierbach" onclick="enlargeImage(this)">
-                <img src="Dart-Anlagen.jpg" alt="Dart Anlage" onclick="enlargeImage(this)">
-            </div>
+        <!-- Spieltag -->
+        <section id="spieltag" class="hidden">
+            <h2>Spieltag</h2>
+            <table id="spieltag-tabelle">
+                <tr>
+                    <th>Heim</th>
+                    <th>Gast</th>
+                    <th>Datum</th>
+                    <th>Uhrzeit</th>
+                </tr>
+                <!-- Hier wird später der Spielplan hochgeladen -->
+            </table>
+        </section>
+
+        <!-- Ergebnisse -->
+        <section id="ergebnisse" class="hidden">
+            <h2>Ergebnisse</h2>
+            <table id="ergebnisse-tabelle">
+                <tr>
+                    <th>Spieltag</th>
+                    <th>Heim</th>
+                    <th>Gast</th>
+                    <th>Ergebnis</th>
+                </tr>
+                <!-- Ergebnisse für 15 Spieltage -->
+            </table>
+        </section>
+
+        <!-- Tabelle -->
+        <section id="tabelle" class="hidden">
+            <h2>Tabelle</h2>
+            <table id="tabelle-tabelle">
+                <tr>
+                    <th>Platz</th>
+                    <th>Mannschaft</th>
+                    <th>Spiele</th>
+                    <th>Punkte</th>
+                </tr>
+                <!-- Tabelle wird basierend auf Ergebnissen berechnet -->
+            </table>
         </section>
     </main>
 
