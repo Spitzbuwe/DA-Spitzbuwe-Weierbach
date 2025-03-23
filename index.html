@@ -6,76 +6,102 @@
     <title>Dart-Abteilung Spitzbuwe Weierbach</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuButton = document.querySelector(".dropbtn");
-            const menuContent = document.querySelector(".dropdown-content");
-
-            menuButton.addEventListener("click", function () {
-                menuContent.classList.toggle("hidden");
-            });
-        });
-    </script>
-    <style>
-        .hidden { display: none; }
-    </style>
 </head>
 <body>
     <div class="header-container">
         <img src="Wappen.png" alt="Vereinswappen" class="wappen" style="width: 100px; height: auto;">
         <h1>Dart-Abteilung Spitzbuwe Weierbach</h1>
     </div>
-    <h2>Hauptverein: <a href="https://www.vfl-weierbach.de/" target="_blank">VfL Weierbach 1892 e.V.</a></h2>
-    <img src="Vfl-Weierbach.png" alt="VfL Weierbach Wappen">
-
+    <h2><a href="https://www.vfl-weierbach.de/" target="_blank">VfL Weierbach 1892 e.V.</a></h2>
+    
     <div class="menu-bio-container">
         <div class="nav-container">
             <div class="dropdown">
                 <button class="dropbtn">☰ Menü</button>
-                <div class="dropdown-content hidden">
+                <div class="dropdown-content">
                     <a href="#" onclick="showOnly('spieler')">Vereinsspieler</a>
                     <a href="#" onclick="showOnly('galerie')">Bildergalerie</a>
                     <a href="#" onclick="showOnly('sponsoren-list')">Sponsoren</a>
                     <div class="dropdown">
                         <a href="#">Veranstaltungen ▼</a>
-                        <div class="dropdown-content hidden">
+                        <div class="dropdown-content">
                             <a href="#" onclick="showOnly('spieltag')">Spieltag</a>
                             <a href="#" onclick="showOnly('ligatabelle')">Ligatabelle</a>
                         </div>
                     </div>
                     <a href="#" onclick="showOnly('sonstiges')">Sonstiges</a>
                     <a href="#" onclick="showOnly('aktuelles')">Aktuelles</a>
-                    <a href="#" onclick="showOnly('adresse')">Adresse</a>
                     <a href="#" onclick="showOnly('kontakt')">Kontakt</a>
+                    <a href="#" onclick="showOnly('adresse')">Adresse</a>
                     <a href="https://www.instagram.com/spitzbuwe/" target="_blank">📷 Instagram</a>
                     <a href="https://www.facebook.com/profile.php?id=61574211682391" target="_blank">📘 Facebook</a>
-                
+                </div>
+            </div>
+        </div>
+        <div class="bio-container">
             <section id="bio">
                 <h2>Über uns</h2>
                 <p>Wir sind die Dart-Abteilung des VfL Weierbach, gegründet am 01. März 2025. Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt. Ab September nehmen wir an der EHM-Liga teil. Derzeit besteht unser Team aus 11 aktiven Spielern. 🎯</p>
             </section>
-        </div></div>
+        </div>
+    </div>
+
+    <section id="spieler" class="hidden">
+        <h2>Vereinsspieler</h2>
+        <ul>
+            <li>Matthias "The Underdog" Müller</li>
+            <li>Marvin "The Wildfly" Wild</li>
+            <li>Julian "Madhouse" Müller</li>
+            <li>Georg "The Hammer" Hamelmann</li>
+            <li>Sven "The Red Baron" Lempke</li>
+            <li>Stefan "The Flash" Schlosser</li>
+            <li>Björn Rupprich</li>
+            <li>Niko "The Frozen Sniper" Müller</li>
+            <li>Thomas "TK Finish" Keibel</li>
+            <li>Tobias</li>
+            <li>Christian "Dart Vader" Wagner</li>
+        </ul>
+    </section>
+
+    <section id="galerie" class="hidden">
+        <h2>Bildergalerie</h2>
+        <div class="gallery">
+            <img src="Vereinsheim-Weierbach.jpg" alt="Vereinsheim Weierbach">
+            <img src="Dart-Anlagen.jpg" alt="Dart Anlage">
+        </div>
+    </section>
+
+    <section id="sponsoren-list" class="hidden">
+        <h2>Unsere Sponsoren</h2>
+        <div class="sponsor">
+            <a href="https://www.glasfinish-folientechnik.de/" target="_blank">
+                <img src="Glasfinish.png" alt="Glasfinish">
+                <p>Glasfinish</p>
+            </a>
+        </div>
+        <div class="sponsor">
+            <a href="https://medimobil-gmbh.de/bernkastel-kues/" target="_blank">
+                <img src="Medimobil.png" alt="Medimobil">
+                <p>Medimobil</p>
+            </a>
+        </div>
+        <div class="sponsor">
+            <a href="https://www.ebay.de/str/elektromixshop2015/" target="_blank">
+                <img src="EMS.png" alt="EMS Elektro Mix Shop">
+                <p>EMS Elektro Mix Shop</p>
+            </a>
+        </div>
+    </section>
+
     <section id="kontakt" class="hidden">
         <h2>Kontakt</h2>
         <p>📧 E-Mail: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
         <p>📍 Adresse: Bein</p>
     </section>
-    <footer>
-        <p>Kontakt: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
-    </footer>
+
     <section id="aktuelles" class="hidden">
         <h2>Aktuelles</h2>
         <p>Hier werden Neuigkeiten und aktuelle Informationen veröffentlicht.</p>
     </section>
-    <section id="adresse" class="hidden">
-        <h2>Adresse</h2>
-        <p>📍 Bein</p>
-    </section>
-    <section id="kontakt" class="hidden">
-        <h2>Kontakt</h2>
-        <p>📧 E-Mail: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
-        <p>📍 Adresse: Bein</p>
-    </section>
-
-
+</body>
 </html>
