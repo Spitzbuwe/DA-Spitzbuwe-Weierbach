@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    // Menü anzeigen/verstecken
+    // Menü-Button klickbar machen
     menuButton.addEventListener("click", function () {
         menu.classList.toggle("hidden");
     });
