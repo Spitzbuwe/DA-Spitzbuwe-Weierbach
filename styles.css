@@ -84,6 +84,10 @@ nav ul li a:hover {
     width: 100%;
 }
 
+.menu-item .dropdown {
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
 /* Spieler */
 .spieler-container {
     display: flex;
