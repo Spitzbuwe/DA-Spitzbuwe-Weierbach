@@ -1,3 +1,4 @@
+/* Allgemeine Stile */
 body {
     font-family: Arial, sans-serif;
     background-color: #ccffcc;
@@ -7,59 +8,74 @@ body {
     text-align: center;
 }
 
+/* Header-Styling */
 header {
     background-color: black;
     color: white;
     padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: none;
-    padding: 0;
-}
-
-nav ul li {
-    padding: 10px;
-}
-
-nav button {
-    background-color: #444;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.gallery img {
-    max-width: 80px; /* Größe anpassen */
-    height: auto;
-    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .wappen {
-    height: 60px; /* Größe anpassen */
-    width: auto; /* Automatische Breite */
+    height: 80px; /* Größe anpassen */
+    width: auto;
     display: block;
     margin: 0 auto;
 }
 
-nav ul li a {
+/* Navigation */
+nav {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    background-color: black;
+    padding: 10px 0;
+}
+
+#menu li {
+    display: inline;
+}
+
+#menu li a {
     color: white;
     text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
 }
 
-section {
-    margin: 20px;
+#menu li a:hover {
+    background-color: gray;
+    border-radius: 5px;
 }
 
+/* Sponsoren */
 .sponsor img {
-    max-width: 150px;
+    max-width: 120px;
+    height: auto;
+    margin: 10px auto;
+}
+
+/* Bildergalerie */
+.gallery img {
+    max-width: 150px; /* Verkleinerte Größe */
+    height: auto;
     margin: 10px;
 }
 
+/* Footer */
 footer {
     background-color: black;
     color: white;
     padding: 10px;
+    margin-top: 20px;
 }
