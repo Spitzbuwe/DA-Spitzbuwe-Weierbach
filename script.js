@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Menü-Button Logik
+    // Dropdown-Menü Funktion
     const menuButton = document.querySelector(".dropbtn");
     const menuContent = document.querySelector(".dropdown-content");
 
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Funktion zum Anzeigen bestimmter Sektionen
 function showOnly(sectionId) {
-    let sections = ["spieler", "galerie", "sponsoren-list", "spieltag", "ligatabelle", "sonstiges", "aktuelles", "adresse", "kontakt", "impressum"];
+    let sections = ["spieler", "galerie", "sponsoren-list", "spieltag", "ligatabelle", "sonstiges", "aktuelles", "adresse", "kontakt"];
     sections.forEach(id => {
         let element = document.getElementById(id);
         if (element) {
