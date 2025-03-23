@@ -7,13 +7,55 @@ body {
     text-align: center;
 }
 
+/* Header */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #63C351;
+}
+
+.wappen {
+    width: 80px;
+    height: auto;
+}
+
+.wappen-klein {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+}
+
 /* Navigation */
+nav {
+    background-color: #62C250;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #62C250;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    background-color: #61C24D;
 }
 
 /* Dropdown-Menü */
@@ -30,16 +72,55 @@ nav ul {
     min-width: 180px;
     top: 100%;
     left: 0;
+    z-index: 1000;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
 }
 
-.menu-item:hover .dropdown {
+.menu-item .dropdown.show {
     display: block;
 }
 
-/* Wappen */
-.wappen-klein {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-    vertical-align: middle;
+.menu-item .dropdown li {
+    width: 100%;
+}
+
+/* Spieler */
+.spieler-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.spieler {
+    text-align: center;
+}
+
+.spieler img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Tabellen */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #62C250;
+}
+
+/* Versteckte Sektionen */
+.hidden {
+    display: none;
 }
