@@ -9,39 +9,61 @@
     <script src="scripts.js" defer></script>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <img src="Wappen.png" alt="Dart-Abteilung Wappen" width="100">
+        <img src="Vfl-Weierbach.png" alt="VfL Weierbach 1892 e.V." width="100">
+        <h1>VfL Weierbach 1892 e.V.</h1>
     </header>
 
+    <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#home">Startseite</a></li>
-            <li><a href="#training">Training</a></li>
+            <li><a href="#" onclick="showSection('home')">Startseite</a></li>
+            <li><a href="#" onclick="showSection('training')">Training</a></li>
             <li class="menu-item">
                 <a>Verein ▼</a>
                 <ul class="dropdown">
-                    <li><a href="#spieler">Vereinsspieler</a></li>
-                    <li><a href="#bio">Über uns</a></li>
+                    <li><a href="#" onclick="showSection('spieler')">Vereinsspieler</a></li>
+                    <li><a href="#" onclick="showSection('spieltag')">Spieltag</a></li>
+                    <li><a href="#" onclick="showSection('ergebnisse')">Ergebnisse</a></li>
+                    <li><a href="#" onclick="showSection('tabelle')">Tabelle</a></li>
+                    <li><a href="#" onclick="showSection('bio')">Über uns</a></li>
                 </ul>
             </li>
-            <li><a href="#sponsoren">Sponsoren</a></li>
-            <li><a href="#galerie">Bildergalerie</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#" onclick="showSection('sponsoren')">Sponsoren</a></li>
+            <li><a href="#" onclick="showSection('galerie')">Bildergalerie</a></li>
+            <li><a href="#" onclick="showSection('kontakt')">Kontakt</a></li>
         </ul>
     </nav>
 
+    <!-- Hauptbereich -->
     <main>
         <section id="home">
-            <h1>Willkommen bei der Dart-Abteilung des VfL Weierbach</h1>
-            <p>Hier erfährst du alles über unser Team, unser Training und die Veranstaltungen!</p>
+            <div class="header-container">
+                <img src="Wappen.png" alt="Dart-Abteilung Wappen" width="100">
+                <h2>Willkommen bei der Dart-Abteilung des VfL Weierbach</h2>
+            </div>
+            <p>Wir sind die Dart-Abteilung des VfL Weierbach, gegründet am 01. März 2025.  
+               Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt.  
+               Ab September nehmen wir an der EHM-Liga teil. Derzeit besteht unser Team aus 11 aktiven Spielern.</p>
+            <div class="social-links">
+    <a href="https://www.instagram.com/spitzbuwe/" target="_blank">
+        <img src="instagram.png" alt="Instagram" width="30">
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61574211682391" target="_blank">
+        <img src="facebook.png" alt="Facebook" width="30">
+    </a>
+</div>
+
         </section>
 
-        <section id="training">
+        <section id="training" class="hidden">
             <h2>Trainingstag</h2>
             <p>Jeden Donnerstag ab 18 Uhr im Vereinsheim.</p>
         </section>
 
-        <section id="spieler">
+        <section id="spieler" class="hidden">
             <h2>Vereinsspieler</h2>
             <ul>
                 <li>Matthias "The Underdog" Müller</li>
@@ -58,18 +80,16 @@
             </ul>
         </section>
 
-        <section id="galerie">
+        <section id="galerie" class="hidden">
             <h2>Bildergalerie</h2>
             <div class="gallery">
-                <img src="Vereinsheim-Weierbach.jpg" alt="Vereinsheim Weierbach">
-                <img src="Dart-Anlagen.jpg" alt="Dart Anlage">
+                <img src="Vereinsheim-Weierbach.jpg" alt="Vereinsheim Weierbach" onclick="enlargeImage(this)">
+                <img src="Dart-Anlagen.jpg" alt="Dart Anlage" onclick="enlargeImage(this)">
             </div>
         </section>
 
-        <section id="sponsoren">
+        <section id="sponsoren" class="hidden">
             <h2>Unsere Sponsoren</h2>
-            <p>Dank der großzügigen Unterstützung unserer Sponsoren konnten wir unsere Dart-Anlagen modernisieren!</p>
-
             <div class="sponsoren-container">
                 <div class="sponsor">
                     <a href="https://www.glasfinish.de" target="_blank">
@@ -77,41 +97,18 @@
                     </a>
                     <p>Glasfinish</p>
                 </div>
-
-                <div class="sponsor">
-                    <a href="https://www.medimobil.de" target="_blank">
-                        <img src="Medimobil.png" alt="Medimobil Logo">
-                    </a>
-                    <p>Medimobil</p>
-                </div>
-
-                <div class="sponsor">
-                    <a href="https://www.ebay.de/str/elektromixshop2015" target="_blank">
-                        <img src="EMS.png" alt="EMS Elektro Mix Shop Logo">
-                    </a>
-                    <p>EMS Elektro Mix Shop</p>
-                </div>
             </div>
         </section>
 
-        <section id="bio">
-            <h2>Über uns</h2>
-            <p>Wir sind die Dart-Abteilung des VfL Weierbach, gegründet am 01. März 2025.  
-               Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt.  
-               Ab September nehmen wir an der EHM-Liga teil. Derzeit besteht unser Team aus 11 aktiven Spielern.</p>
-            <img src="Vfl-Weierbach.png" alt="VfL Weierbach Logo" width="150">
-        </section>
-
-        <section id="kontakt">
+        <section id="kontakt" class="hidden">
             <h2>Kontakt</h2>
             <p>Email: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
-            <p>Folge uns auf <a href="https://www.instagram.com/vflweierbach">Instagram</a> und 
-            <a href="https://www.facebook.com/vflweierbach">Facebook</a></p>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Dart-Abteilung VfL Weierbach | Alle Rechte vorbehalten</p>
     </footer>
+
 </body>
 </html>
