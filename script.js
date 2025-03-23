@@ -1,27 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Globale Funktion für die Navigation definieren
+    // Funktion zum Anzeigen der gewünschten Sektion
     window.showSection = function (id) {
-        let section = document.getElementById(id);
-        if (!section) {
-            console.warn(`Warnung: Die Sektion mit der ID "${id}" wurde nicht gefunden.`);
-            return;
-        }
-
-        // Alle Sektionen ausblenden
         document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
-        
-        // Angeforderte Sektion anzeigen
-        section.classList.remove("hidden");
+        let section = document.getElementById(id);
+        if (section) section.classList.remove("hidden");
     };
 
-    // Dropdown-Menü klickbar machen
+    // Dropdown-Menü nur beim Klick öffnen
     document.querySelectorAll(".menu-item > a").forEach(menu => {
         menu.addEventListener("click", function (event) {
             event.preventDefault();
             let dropdown = this.nextElementSibling;
-            if (dropdown) {
-                dropdown.classList.toggle("show");
-            }
+            if (dropdown) dropdown.classList.toggle("show");
         });
     });
 
@@ -33,4 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
+
+    // Funktion zum Vergrößern der Bilder in der Galerie
+    window.enlargeImage = function (event) {
+        if (event.target.tagName === "IMG") {
+            let imgSrc = event.target.src;
+            let overlay = document.createElement("div");
+            overlay.classList.add("image-overlay");
+            overlay.innerHTML = `<img src="${imgSrc}" class="large-image">
+                                 <span class="close-btn" onclick="this.parentElement.remove()">✖</span>`;
+            document.body.appendChild(overlay);
+        }
+    };
 });
