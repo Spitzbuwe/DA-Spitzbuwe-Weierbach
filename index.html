@@ -1,46 +1,92 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Funktion zum Anzeigen der gewünschten Sektion
-    window.showSection = function (id) {
-        document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
-        let section = document.getElementById(id);
-        if (section) section.classList.remove("hidden");
-    };
-
-    // Dropdown-Menü nur beim Klick öffnen
-    document.querySelectorAll(".menu-item > a").forEach(menu => {
-        menu.addEventListener("click", function (event) {
-            event.preventDefault();
-            let dropdown = this.nextElementSibling;
-            if (dropdown && dropdown.classList.contains("dropdown")) {
-                dropdown.classList.toggle("show");
-            }
-        });
-    });
-
-    // Klick außerhalb des Dropdowns schließt es
-    document.addEventListener("click", function (event) {
-        if (!event.target.closest(".menu-item")) {
-            document.querySelectorAll(".dropdown").forEach(dropdown => {
-                dropdown.classList.remove("show");
-            });
-        }
-    });
-
-    // Funktion zum Vergrößern der Bilder in der Galerie
-    window.enlargeImage = function (event) {
-        if (event.target.tagName === "IMG") {
-            let imgSrc = event.target.src;
-            let overlay = document.createElement("div");
-            overlay.classList.add("image-overlay");
-            overlay.innerHTML = `<img src="${imgSrc}" class="large-image">
-                                 <span class="close-btn" onclick="this.parentElement.remove()">✖</span>`;
-            document.body.appendChild(overlay);
-        }
-    };
-
-    // Besucherzähler (Lokal gespeichert)
-    let count = localStorage.getItem("visitorCount") || 0;
-    count++;
-    localStorage.setItem("visitorCount", count);
-    document.getElementById("visitor-count").innerText = count;
-});
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart-Abteilung Spitzbuwe Weierbach</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="header-container">
+        <img src="Wappen.png" alt="Vereinswappen" class="wappen">
+        <h1>Dart-Abteilung Spitzbuwe Weierbach</h1>
+    </header>
+    
+    <h2 class="verein-info">
+        <a href="https://www.vfl-weierbach.de/" target="_blank">VfL Weierbach 1892 e.V.</a>
+        <br>
+        <img src="Vfl-Weierbach.png" alt="VfL Weierbach Wappen">
+    </h2>
+    
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <li><a href="#" onclick="showOnly('spieler')">Vereinsspieler</a></li>
+            <li><a href="#" onclick="showOnly('galerie')">Bildergalerie</a></li>
+            <li><a href="#" onclick="showOnly('sponsoren')">Sponsoren</a></li>
+            <li class="dropdown">
+                <a href="#">Veranstaltungen ▼</a>
+                <ul class="dropdown-content">
+                    <li><a href="#" onclick="showOnly('spieltag')">Spieltag</a></li>
+                    <li><a href="#" onclick="showOnly('ligatabelle')">Ligatabelle</a></li>
+                </ul>
+            </li>
+            <li><a href="#" onclick="showOnly('aktuelles')">Aktuelles</a></li>
+            <li><a href="#" onclick="showOnly('kontakt')">Kontakt</a></li>
+            <li><a href="#" onclick="showOnly('adresse')">Adresse</a></li>
+        </ul>
+    </nav>
+    
+    <section id="bio">
+        <h2>Folge uns</h2>
+        <p>
+            <a href="https://www.instagram.com/spitzbuwe/" target="_blank">
+                <img src="instagram.png" alt="Instagram" class="social-icon"> Instagram
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61574211682391" target="_blank">
+                <img src="facebook.png" alt="Facebook" class="social-icon"> Facebook
+            </a>
+        </p>
+        <h2>Über uns</h2>
+        <p>Wir sind die Dart-Abteilung des VfL Weierbach, gegründet am 01. März 2025. Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt. Ab September nehmen wir an der EHM-Liga teil. Derzeit besteht unser Team aus 11 aktiven Spielern. 🎯</p>
+    </section>
+    
+    <section id="spieler" class="hidden">
+        <h2>Vereinsspieler</h2>
+        <ul>
+            <li>Matthias "The Underdog" Müller</li>
+            <li>Marvin "The Wildfly" Wild</li>
+            <li>Julian "Madhouse" Müller</li>
+            <li>Georg "The Hammer" Hamelmann</li>
+            <li>Sven "The Red Baron" Lempke</li>
+            <li>Stefan "The Flash" Schlosser</li>
+            <li>Björn Rupprich</li>
+            <li>Niko "The Frozen Sniper" Müller</li>
+            <li>Thomas "TK Finish" Keibel</li>
+            <li>Tobias</li>
+            <li>Christian "Dart Vader" Wagner</li>
+        </ul>
+    </section>
+    
+    <section id="galerie" class="hidden">
+        <h2>Bildergalerie</h2>
+        <div class="gallery">
+            <img src="Vereinsheim.jpg" alt="Vereinsheim" onclick="enlargeImage(event)">
+            <img src="Dartanlagen.jpg" alt="Dartanlagen" onclick="enlargeImage(event)">
+        </div>
+    </section>
+    
+    <section id="sponsoren" class="hidden">
+        <h2>Sponsoren</h2>
+        <div class="sponsoren-liste">
+            <div class="sponsor"><a href="https://www.glasfinish-folientechnik.de/"><img src="Glasfinish.png" alt="Glasfinish"></a></div>
+            <div class="sponsor"><a href="https://medimobil-gmbh.de/bernkastel-kues/"><img src="Medimobil.png" alt="Medimobil"></a></div>
+            <div class="sponsor"><a href="https://www.ebay.de/str/elektromixshop2015"><img src="EMS.png" alt="EMS Elektro Mix Shop"></a></div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Dart-Abteilung Spitzbuwe Weierbach</p>
+    </footer>
+</body>
+</html>
