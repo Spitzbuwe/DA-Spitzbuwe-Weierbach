@@ -3,104 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dart-Abteilung Spitzbuwe Weierbach</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <title>DC Spitzbuwe Weierbach</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header -->
     <header>
-        <img src="images/Wappen.png" alt="Vereinswappen" class="wappen">
-        <h1>Dart-Abteilung Spitzbuwe Weierbach</h1>
-        <h2>VfL Weierbach 1892 e.V.</h2>
+        <div class="logo">
+            <img src="Wappen.png" alt="Vereinswappen">
+            <h1>DC Spitzbuwe Weierbach</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Start</a></li>
+                <li><a href="#">Spieler</a></li>
+                <li><a href="#">Spielplan</a></li>
+                <li><a href="#">Bildergalerie</a></li>
+                <li><a href="#">Sponsoren</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#" onclick="showSection('home')">Startseite</a></li>
-            <li><a href="#" onclick="showSection('training')">Training</a></li>
-            <li class="menu-item">
-                <a href="#">Verein ▼</a>
-                <ul class="dropdown">
-                    <li><a href="#" onclick="showSection('spieler')">Aktuelle Spieler</a></li>
-                    <li><a href="#" onclick="showSection('spieltag')">Spieltag</a></li>
-                    <li><a href="#" onclick="showSection('ergebnisse')">Ergebnisse</a></li>
-                    <li><a href="#" onclick="showSection('tabelle')">Tabelle</a></li>
-                    <li><a href="#" onclick="showSection('bio')">Über uns</a></li>
-                </ul>
-            </li>
-            <li><a href="#" onclick="showSection('sponsoren')">Sponsoren</a></li>
-            <li><a href="#" onclick="showSection('galerie')">Bildergalerie</a></li>
-            <li><a href="#" onclick="showSection('kontakt')">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hauptinhalt -->
-    <main>
-        <section id="home">
-            <h2>Willkommen bei den Spitzbuwe Weierbach</h2>
-            <p>Wir sind die Dart-Abteilung des VfL Weierbach, gegründet am 01. März 2025.  
-               Unser Training findet jeden Donnerstag ab 18 Uhr im Vereinsheim statt.  
-               Ab September nehmen wir an der EHM-Liga teil.</p>
-        </section>
-
-        <section id="training" class="hidden">
-            <h2>Training</h2>
-            <p>Wir trainieren jeden Donnerstag ab 18 Uhr im Vereinsheim des VfL Weierbach.</p>
-        </section>
-
-        <section id="spieler" class="hidden">
-            <h2>Unsere Spieler</h2>
-            <div class="spieler-container">
-                <div class="spieler">
-                    <p>Matthias „The Underdog“ Müller</p>
-                </div>
-                <div class="spieler">
-                    <p>Marvin „The Wildfly“ Wild</p>
-                </div>
-                <div class="spieler">
-                    <p>Julian „Madhouse“ Müller</p>
-                </div>
-                <div class="spieler">
-                    <p>12 weitere Spieler folgen...</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="sponsoren" class="hidden">
-            <h2>Unsere Sponsoren</h2>
-            <div class="sponsoren-container">
-                <img src="images/Glasfinish.png" alt="Glasfinish">
-                <img src="images/Medimobil.png" alt="Medimobil">
-                <img src="images/EMS.png" alt="EMS Elektro Mix Shop">
-            </div>
-        </section>
-
-        <section id="galerie" class="hidden">
-            <h2>Bildergalerie</h2>
-            <img src="images/Vereinsheim-Weierbach.jpg" alt="Vereinsheim">
-            <img src="images/Dart-Anlagen.jpg" alt="Dart Anlagen">
-        </section>
-
-        <section id="bio" class="hidden">
-            <h2>Über uns</h2>
-            <p>Die Dart-Abteilung wurde am 01. März 2025 gegründet und ist Teil des VfL Weierbach.</p>
-        </section>
-
-        <section id="kontakt" class="hidden">
-            <h2>Kontakt</h2>
-            <p>Email: <a href="mailto:dcspitzbuweweierbach@gmail.com">dcspitzbuweweierbach@gmail.com</a></p>
-        </section>
-    </main>
+    <section class="hero">
+        <h2>Willkommen bei den Spitzbuwe!</h2>
+        <p>Hier erfährst du alles über unseren Verein, unsere Spieler & Spieltage.</p>
+        <a href="#" class="btn">Mehr erfahren</a>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Dart-Abteilung VfL Weierbach | Alle Rechte vorbehalten</p>
-        <div class="social-media">
-            <a href="#"><img src="images/instagramm.png" alt="Instagram"></a>
-            <a href="#"><img src="images/Facebook.png" alt="Facebook"></a>
-        </div>
+        <p>© 2025 DC Spitzbuwe Weierbach</p>
     </footer>
 
 </body>
