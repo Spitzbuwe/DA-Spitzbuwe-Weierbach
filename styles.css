@@ -1,72 +1,12 @@
-/* Allgemeines Styling */
 body {
     background-color: #5CC14A;
-    color: #FFFFFF; /* Schriftfarbe auf Weiß gesetzt */
+    color: #FFFFFF;
     font-family: Arial, sans-serif;
     margin: 0;
 }
-
-/* Header */
-header {
-    background-color: #63C351;
-    padding: 10px 0;
-    text-align: center;
-}
-
-/* Navigation */
-nav {
-    background-color: #62C250;
-    display: flex;
-    justify-content: center;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-nav ul li {
-    position: relative;
-}
 nav ul li a {
-    display: block;
-    color: #FFFFFF; /* Schrift in Menü auf Weiß */
-    text-decoration: none;
-    padding: 15px 20px;
-    transition: background 0.3s ease;
-    cursor: pointer;
+    color: #FFFFFF;
 }
-nav ul li a:hover {
-    background-color: #61C24D;
-}
-
-/* Dropdown-Menü */
-nav ul li .dropdown {
-    display: none;
-    position: absolute;
-    background-color: #62C250;
-    list-style: none;
-    padding: 0;
-    min-width: 180px;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-}
-nav ul li .dropdown.show {
-    display: block;
-}
-nav ul li .dropdown li {
-    width: 100%;
-}
-
-/* Inhaltsbereich */
-.content {
-    padding: 20px;
-    text-align: center;
-}
-
-/* Sponsoren-Bereich */
 .sponsoren-container {
     display: flex;
     justify-content: center;
@@ -74,32 +14,15 @@ nav ul li .dropdown li {
     flex-wrap: wrap;
     margin-top: 20px;
 }
-
-.sponsor {
-    text-align: center;
-    max-width: 200px;
-}
-
-.sponsor p {
-    color: #FFFFFF; /* Sponsorennamen in Weiß */
-}
-
 .sponsor img {
-    width: 150px;  /* Einheitliche Breite */
-    height: 100px; /* Einheitliche Höhe */
-    object-fit: contain; /* Sorgt dafür, dass das Bild nicht verzerrt wird */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
-
 .sponsor img:hover {
     transform: scale(1.1);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-/* Footer */
-footer {
-    background-color: #63C351;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+.sponsor p {
+    color: #FFFFFF;
 }
