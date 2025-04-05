@@ -1,0 +1,143 @@
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Musikplayer</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <!-- Playlist -->
+    <item>
+     <widget class="QListWidget" name="playlistWidget"/>
+    </item>
+    <!-- Fortschrittsbalken -->
+    <item>
+     <widget class="QSlider" name="progressSlider">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <!-- Lautstärkeregler -->
+    <item>
+     <widget class="QSlider" name="volumeSlider">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <!-- Metadatenanzeige -->
+    <item>
+     <widget class="QLabel" name="metadataLabel">
+      <property name="text">
+       <string>Metadaten werden hier angezeigt</string>
+      </property>
+     </widget>
+    </item>
+    <!-- Buttons -->
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <!-- Abspielen -->
+      <item>
+       <widget class="QPushButton" name="playButton">
+        <property name="text">
+         <string>Abspielen</string>
+        </property>
+       </widget>
+      </item>
+      <!-- Pausieren -->
+      <item>
+       <widget class="QPushButton" name="pauseButton">
+        <property name="text">
+         <string>Pausieren</string>
+        </property>
+       </widget>
+      </item>
+      <!-- Stoppen -->
+      <item>
+       <widget class="QPushButton" name="stopButton">
+        <property name="text">
+         <string>Stoppen</string>
+        </property>
+       </widget>
+      </item>
+      <!-- Gesang trennen -->
+      <item>
+       <widget class="QPushButton" name="separateButton">
+        <property name="text">
+         <string>Gesang trennen</string>
+        </property>
+       </widget>
+      </item>
+      <!-- Dateien hinzufügen -->
+      <item>
+       <widget class="QPushButton" name="addButton">
+        <property name="text">
+         <string>Dateien hinzufügen</string>
+        </property>
+       </widget>
+      </item>
+      <!-- Song entfernen -->
+      <item>
+       <widget class="QPushButton" name="removeButton">
+        <property name="text">
+         <string>Song entfernen</string>
+        </property>
+       </widget>
+      </item>
+      <!-- Playlist speichern -->
+      <item>
+       <widget class="QPushButton" name="saveButton">
+        <property name="text">
+         <string>Playlist speichern</string>
+        </property>
+       </widget>
+      </item>
+      <!-- Playlist laden -->
+      <item>
+       <widget class="QPushButton" name="loadButton">
+        <property name="text">
+         <string>Playlist laden</string>
+        </property>
+       </widget>
+      </item>
+      <!-- Dunkelmodus umschalten -->
+      <item>
+       <widget class="QPushButton" name="darkModeButton">
+        <property name="text">
+         <string>Dunkelmodus umschalten</string>
+        </property>
+       </widget>
+      </item>
+      <!-- Stems exportieren -->
+      <item>
+       <widget class="QPushButton" name="exportButton">
+        <property name="text">
+         <string>Stems exportieren</string>
+        </property>
+       </widget>
+      </item>
+      <!-- Metadaten bearbeiten -->
+      <item>
+       <widget class="QPushButton" name="editMetadataButton">
+        <property name="text">
+         <string>Metadaten bearbeiten</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
